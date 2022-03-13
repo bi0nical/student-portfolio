@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "bootstrap": "^5.1.3",
+    "gulp": "^4.0.2",
+    "gulp-html-beautify": "^1.0.1",
+    "gulp-js-beautify": "^0.0.2",
+    "gulp-js-minify": "^0.0.3",
+    "gulp-minify": "^3.1.0",
+    "gulp-sass": "^5.1.0",
+    "jquery": "^3.6.0",
+    "sass": "^1.49.9"
+  },
+  "devDependencies": {
+    "js-beautify": "^1.14.0"
+  },
+  "name": "student-work-fe",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
