@@ -1,0 +1,67 @@
+.gallery-tools{
+
+    &__header{
+
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+
+        .header-left{
+
+            display: flex;
+            height: fit-content;
+
+            .course-info, .yoobee-info{
+
+                margin-right: 3rem;
+
+                &__heading{
+                    font-family: $content-font;
+                    font-weight: $content-heading-weight;
+                    font-size: 1rem;
+                    line-height: 1.2rem;
+                }
+
+                &__subheading{
+                    font-family: $content-font;
+                    font-weight: $body-font-weight;
+                    font-size: .8rem;
+                    line-height: .8rem;
+                    color: $purple;
+                    margin: 0;
+                }
+            }
+        }
+
+        .header-right{
+
+            display: flex;
+            height: auto;
+
+
+            &__btn{
+                padding: 0 1rem;
+                min-height: 100%;
+                margin-left: 1.5rem;
+                background: none;
+                border: solid 3px $purple;
+                font-family: $content-font;
+                font-weight: $body-font-weight;
+                font-size: .8rem;
+                line-height: .8rem;
+
+                &:hover{
+                    background-color: $purple;
+                    color: white;
+                }
+            }
+        }
+    }
+
+
+    &__main{
+        
+    }
+
+}
