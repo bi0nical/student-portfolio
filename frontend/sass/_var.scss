@@ -1,5 +1,13 @@
-
+$mobile: "(max-width: 600px)";
+$tablet: "(min-width: 601px) and (max-width: 1023px)";
+$desktop: "(min-width: 1024px)";
 
 $black: #04040A !default;
 $purple: #313490 !default;
 $yellow: #F7D067 !default;
+
+$content-font: 'Montserrat', sans-serif;
+
+$content-heading-weight: 700;
+$body-font-weight: 300;
+

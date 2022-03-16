@@ -61,6 +61,6 @@ var settings = {
     }),
 };
 
-$.ajax(settings).done(function(response) {
-    console.log(response);
-});
+// $.ajax(settings).done(function(response) {
+//     console.log(response);
+// });
