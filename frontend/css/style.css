@@ -1,9 +1,35 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,700");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
+}
+
+.screen a {
+  display: contents;
+  text-decoration: none;
+}
+
+.container-center-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%;
+}
+
+.container-center-horizontal > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.valign-text-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 :root {
@@ -31,6 +57,30 @@
   font-weight: 700;
 }
 
+:root {
+  --font-size-l: 18px;
+  --font-size-m: 14px;
+  --font-size-s: 11px;
+  --font-family-montserrat: "Montserrat", Helvetica;
+}
+
+.montserrat-bold-black-18px {
+  color: var(--black);
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.montserrat-light-black-11px {
+  color: var(--black);
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 300;
+}
+
+/* screen - search */
 body {
   font-family: "Montserrat";
   background-color: white;
@@ -39,7 +89,7 @@ body {
   font: 65.5%;
 }
 
-.container {
+.container-search {
   width: 100vw;
   margin: auto;
 }
@@ -169,130 +219,693 @@ input:focus {
     font-size: 0.7rem;
   }
 }
-.container-gallery {
+/* screen - gallery */
+.gallery {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  height: 3376px;
+  padding: 188px 91px;
   width: 100vw;
-  height: 150vh;
   display: flex;
-  justify-content: space-evenly;
-  padding-top: 2rem;
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
   align-items: center;
+  justify-content: space-evenly;
 }
 
-.col-01 {
-  width: 385px;
-  height: 443px;
-  background-image: url(/img/gallery-13.png);
-  background-size: contain;
-  background-repeat: no-repeat;
+.gallery .flex-col {
+  align-items: flex-start;
   display: flex;
-  flex-wrap: wrap;
-  cursor: pointer;
+  flex-direction: column;
+  min-height: 106px;
+  width: 1252px;
 }
 
-.col-02 {
-  width: 385px;
-  height: 443px;
-  background-image: url(/img/gallery-11.png);
-  background-size: contain;
-  background-repeat: no-repeat;
+.gallery .flex-row {
+  align-items: center;
   display: flex;
-  flex-wrap: wrap;
-  cursor: pointer;
+  min-width: 1252px;
 }
 
-.col-03 {
-  width: 385px;
-  height: 443px;
-  background-image: url(/img/gallery-14.png);
-  background-size: contain;
-  background-repeat: no-repeat;
+.gallery .logo {
+  height: 53px;
+  margin-bottom: 1px;
+  object-fit: cover;
+  width: 721px;
+}
+
+.gallery .line-top {
+  height: 56px;
+  margin-left: 50px;
+  width: 481px;
+}
+
+.gallery .class22 {
+  height: 24px;
+  margin-top: 26px;
+  width: 193px;
+}
+
+.gallery .flex-row-1 {
+  align-items: flex-start;
   display: flex;
-  flex-wrap: wrap;
-  cursor: pointer;
+  height: 2708px;
+  min-width: 1255px;
 }
 
-.col-04 {
-  width: 385px;
-  height: 443px;
-  background-image: url(/img/gallery-16.png);
-  background-size: contain;
-  background-repeat: no-repeat;
+.gallery .flex-col-1 {
+  align-items: flex-start;
+  align-self: flex-end;
   display: flex;
-  flex-wrap: wrap;
-  cursor: pointer;
+  flex-direction: column;
+  min-height: 2687px;
+  width: 823px;
 }
 
-.col-05 {
-  width: 385px;
-  height: 443px;
-  background-image: url(/img/gallery-15.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  transform: translateY(-150px);
-  display: flex;
-  flex-wrap: wrap;
-  cursor: pointer;
+.gallery .overlap-group {
+  height: 146px;
+  position: relative;
+  width: 576px;
 }
 
-.col-06 {
-  width: 385px;
-  height: 500px;
-  background-image: url(/img/student-work-04.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  display: flex;
-  flex-wrap: wrap;
-  transform: translateY(30px);
-  cursor: pointer;
-}
-
-.col-07 {
-  width: 385px;
-  height: 443px;
-  background-image: url(/img/student-work-05.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  transform: translateY(-150px);
-  display: flex;
-  flex-wrap: wrap;
-  cursor: pointer;
-}
-
-.col-08 {
-  width: 385px;
-  height: 443px;
-  background-image: url(/img/student-work-12.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  transform: translateY(-160px);
-  display: flex;
-  flex-wrap: wrap;
-  cursor: pointer;
-}
-
-.col-09 {
-  width: 385px;
-  height: 500px;
-  background-image: url(/img/student-work-13.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  transform: translateY(-140px);
-  display: flex;
-  flex-wrap: wrap;
-  cursor: pointer;
-}
-
-p #textStyle {
-  font-family: "Montserrat";
-  font-size: 18px;
-  color: #03030a;
-  display: flex;
-}
-
-p .col-01 {
+.gallery .about {
+  color: var(--jaguar);
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-m);
+  line-height: 1.3rem;
+  font-weight: 300;
+  left: 0;
+  letter-spacing: 0;
   position: absolute;
-  transform: translateY(100px);
+  top: 0;
+  width: 576px;
 }
+
+.gallery .add-your-project {
+  color: var(--jaguar);
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-m);
+  font-weight: 700;
+  height: 17px;
+  left: 0;
+  letter-spacing: 0;
+  position: absolute;
+  text-align: center;
+  top: 138px;
+}
+
+.gallery .arrow-about {
+  height: 8px;
+  left: 283px;
+  position: absolute;
+  top: 145px;
+  width: 33px;
+}
+
+.gallery .flex-row-2 {
+  align-items: flex-start;
+  display: flex;
+  height: 2501px;
+  margin-top: 40px;
+  min-width: 823px;
+}
+
+.gallery .class-container {
+  align-items: flex-start;
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  min-height: 2410px;
+  width: 392px;
+}
+
+.gallery .class-01 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  min-height: 493px;
+  width: 389px;
+}
+
+.gallery .student-work-01 {
+  height: 443px;
+  width: 385px;
+}
+
+.gallery .flex-row-3 {
+  align-items: center;
+  display: flex;
+  margin-top: 10px;
+  min-width: 369px;
+}
+
+.gallery .qual-assist {
+  height: 22px;
+  letter-spacing: 0;
+  min-width: 100px;
+  text-align: center;
+}
+
+.gallery .arrow {
+  height: 8px;
+  margin-left: 236px;
+  width: 33px;
+}
+
+.gallery .name {
+  letter-spacing: 0;
+  margin-top: 5px;
+  min-height: 13px;
+}
+
+.gallery .class-02 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  min-height: 358px;
+  width: 390px;
+}
+
+.gallery .student-work01 {
+  height: 308px;
+  margin-left: 1px;
+  object-fit: cover;
+  width: 385px;
+}
+
+.gallery .flex-row-4 {
+  align-items: center;
+  display: flex;
+  margin-left: 1px;
+  margin-top: 10px;
+  min-width: 379px;
+}
+
+.gallery .student-name {
+  height: 22px;
+  letter-spacing: 0;
+  min-width: 110px;
+  text-align: center;
+}
+
+.gallery .name-1 {
+  letter-spacing: 0;
+  margin-top: 5px;
+  min-height: 13px;
+}
+
+.gallery .class-03 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  min-height: 500px;
+  width: 389px;
+}
+
+.gallery .student-work-05 {
+  height: 450px;
+  margin-left: 3px;
+  object-fit: cover;
+  width: 382px;
+}
+
+.gallery .flex-row-5 {
+  align-items: flex-start;
+  display: flex;
+  height: 40px;
+  margin-top: 10px;
+  min-width: 364px;
+}
+
+.gallery .project-container {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  min-height: 40px;
+  width: 129px;
+}
+
+.gallery .project-name {
+  height: 22px;
+  letter-spacing: 0;
+  min-width: 129px;
+  text-align: center;
+}
+
+.gallery .project-author-1 {
+  letter-spacing: 0;
+  margin-top: 5px;
+  min-height: 13px;
+}
+
+.gallery .arrow-12 {
+  height: 8px;
+  margin-left: 202px;
+  margin-top: 5px;
+  width: 33px;
+}
+
+.gallery .class-04 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-top: 53px;
+  min-height: 536px;
+  width: 389px;
+}
+
+.gallery .student-work-18 {
+  height: 486px;
+  margin-left: 1px;
+  width: 384px;
+}
+
+.gallery .flex-row-6 {
+  align-items: flex-start;
+  display: flex;
+  height: 40px;
+  margin-top: 10px;
+  min-width: 371px;
+}
+
+.gallery .project-author-2 {
+  letter-spacing: 0;
+  margin-top: 5px;
+  min-height: 13px;
+}
+
+.gallery .arrow-14 {
+  height: 8px;
+  margin-left: 209px;
+  margin-top: 7px;
+  width: 33px;
+}
+
+.gallery .class-05 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-left: 1px;
+  margin-top: 40px;
+  min-height: 330px;
+  width: 391px;
+}
+
+.gallery .student-work-14 {
+  height: 283px;
+  margin-left: 2px;
+  object-fit: cover;
+  width: 385px;
+}
+
+.gallery .flex-row-7 {
+  align-items: flex-start;
+  display: flex;
+  height: 40px;
+  margin-top: 7px;
+  min-width: 386px;
+}
+
+.gallery .project-author-3 {
+  letter-spacing: 0;
+  margin-top: 5px;
+  min-height: 13px;
+}
+
+.gallery .arrow-1-1 {
+  height: 8px;
+  margin-left: 224px;
+  margin-top: 1px;
+  width: 33px;
+}
+
+.gallery .flex-col-2 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-left: 42px;
+  min-height: 2457px;
+  width: 389px;
+}
+
+.gallery .class-06 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  min-height: 333px;
+  width: 388px;
+}
+
+.gallery .student-work-02 {
+  height: 284px;
+  margin-left: 1px;
+  width: 383px;
+}
+
+.gallery .flex-row-8 {
+  align-items: center;
+  display: flex;
+  margin-top: 9px;
+  min-width: 380px;
+}
+
+.gallery .project-name-1 {
+  height: 22px;
+  letter-spacing: 0;
+  min-width: 238px;
+  text-align: center;
+}
+
+.gallery .arrow-8 {
+  height: 8px;
+  margin-left: 109px;
+  width: 33px;
+}
+
+.gallery .name-2 {
+  letter-spacing: 0;
+  margin-top: 5px;
+  min-height: 13px;
+}
+
+.gallery .class-07 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-top: 51px;
+  min-height: 495px;
+  width: 389px;
+}
+
+.gallery .smartmockups {
+  height: 445px;
+  width: 385px;
+}
+
+.gallery .flex-row-9 {
+  align-items: flex-end;
+  display: flex;
+  margin-left: 1px;
+  margin-top: 10px;
+  min-width: 379px;
+}
+
+.gallery .real-fake-doors {
+  height: 22px;
+  letter-spacing: 0;
+  min-width: 152px;
+  text-align: center;
+}
+
+.gallery .arrow-11 {
+  height: 8px;
+  margin-left: 194px;
+  width: 33px;
+}
+
+.gallery .auhor {
+  letter-spacing: 0;
+  margin-top: 5px;
+  min-height: 13px;
+}
+
+.gallery .class-08 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-top: 49px;
+  min-height: 533px;
+  width: 388px;
+}
+
+.gallery .student-work-12 {
+  height: 485px;
+  object-fit: cover;
+  width: 384px;
+}
+
+.gallery .flex-row-10 {
+  align-items: flex-start;
+  display: flex;
+  height: 40px;
+  margin-top: 8px;
+  min-width: 380px;
+}
+
+.gallery .project-author-4 {
+  letter-spacing: 0;
+  margin-top: 5px;
+  min-height: 13px;
+}
+
+.gallery .arrow-1 {
+  height: 8px;
+  margin-left: 218px;
+  margin-top: 7px;
+  width: 33px;
+}
+
+.gallery .class-09 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-left: 1px;
+  margin-top: 41px;
+  min-height: 424px;
+  width: 385px;
+}
+
+.gallery .student-work-22 {
+  height: 392px;
+  width: 383px;
+}
+
+.gallery .flex-row-11 {
+  align-items: center;
+  display: flex;
+  margin-top: 10px;
+  min-width: 379px;
+}
+
+.gallery .arrow-2 {
+  height: 8px;
+  margin-left: 217px;
+  width: 33px;
+}
+
+.gallery .project-author {
+  letter-spacing: 0;
+  margin-left: 1px;
+  margin-top: 5px;
+  min-height: 13px;
+}
+
+.gallery .class-10 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-top: 41px;
+  min-height: 454px;
+  width: 386px;
+}
+
+.gallery .student-work-11 {
+  height: 421px;
+  object-fit: cover;
+  width: 384px;
+}
+
+.gallery .flex-row-12 {
+  align-items: flex-start;
+  display: flex;
+  height: 24px;
+  margin-left: 1px;
+  margin-top: 9px;
+  min-width: 379px;
+}
+
+.gallery .project-name-2 {
+  align-self: flex-end;
+  height: 23px;
+  letter-spacing: 0;
+  text-align: center;
+  width: 129px;
+}
+
+.gallery .ss-container {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-left: 43px;
+  min-height: 2377px;
+  width: 389px;
+}
+
+.gallery .calss-11 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  min-height: 492px;
+  width: 389px;
+}
+
+.gallery .student-work-j {
+  height: 442px;
+  width: 385px;
+}
+
+.gallery .flex-row-13 {
+  align-items: center;
+  display: flex;
+  margin-top: 10px;
+  min-width: 385px;
+}
+
+.gallery .x100-pure-manaakitanga {
+  height: 22px;
+  letter-spacing: 0;
+  min-width: 238px;
+  text-align: center;
+}
+
+.gallery .arrow-7 {
+  height: 8px;
+  margin-left: 114px;
+  width: 33px;
+}
+
+.gallery .name-3 {
+  letter-spacing: 0;
+  margin-top: 5px;
+  min-height: 13px;
+}
+
+.gallery .class-12 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-top: 46px;
+  min-height: 544px;
+  width: 389px;
+}
+
+.gallery .student-work-04 {
+  height: 494px;
+  object-fit: cover;
+  width: 385px;
+}
+
+.gallery .flex-row-14 {
+  align-items: center;
+  display: flex;
+  height: 40px;
+  margin-top: 10px;
+  min-width: 369px;
+}
+
+.gallery .project-author-5 {
+  letter-spacing: 0;
+  margin-top: 5px;
+  min-height: 13px;
+}
+
+.gallery .arrow-6 {
+  height: 8px;
+  margin-left: 207px;
+  width: 33px;
+}
+
+.gallery .class-13 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-top: 47px;
+  min-height: 331px;
+  width: 389px;
+}
+
+.gallery .student-work-13 {
+  height: 282px;
+  width: 385px;
+}
+
+.gallery .flex-row-15 {
+  align-items: flex-start;
+  display: flex;
+  height: 40px;
+  margin-top: 9px;
+  min-width: 380px;
+}
+
+.gallery .project-author-6 {
+  letter-spacing: 0;
+  margin-top: 5px;
+  min-height: 13px;
+}
+
+.gallery .class-14 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-top: 49px;
+  min-height: 410px;
+  width: 384px;
+}
+
+.gallery .student-work-17 {
+  height: 358px;
+  object-fit: cover;
+  width: 379px;
+}
+
+.gallery .flex-row-16 {
+  align-items: flex-start;
+  display: flex;
+  height: 40px;
+  margin-top: 12px;
+  min-width: 380px;
+}
+
+.gallery .project-author-7 {
+  letter-spacing: 0;
+  margin-top: 5px;
+  min-height: 13px;
+}
+
+.gallery .class-15 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-top: 49px;
+  min-height: 409px;
+  width: 389px;
+}
+
+.gallery .student-work-02-1 {
+  height: 353px;
+  object-fit: cover;
+  width: 385px;
+}
+
+.gallery .flex-row-17 {
+  align-items: flex-start;
+  display: flex;
+  height: 40px;
+  margin-top: 16px;
+  min-width: 380px;
+}
+
+.gallery .project-author-8 {
+  letter-spacing: 0;
+  margin-top: 5px;
+  min-height: 13px;
+}
+
+footer {
+  width: 100vw;
+  height: 300px;
+  background-color: #313490;
+}
+
+/* screen - gallery */
