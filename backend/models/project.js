@@ -8,4 +8,4 @@ const projectSchema = new mongoose.Schema({
     portfolio_url: String
 })
 
-module.exports = mongoose.model("Product", projectSchema)
+module.exports = mongoose.model("Project", projectSchema)

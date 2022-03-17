@@ -1,7 +1,12 @@
 console.log("Frontend Javascript is linked!");
 
+// ==============================================
+// Start of database tools
+// ==============================================
+
 $(document).ready(function(){
 
+    // Get Mongo config info
     let url;
     $.ajax({
         url: "config.json",
