@@ -305,22 +305,6 @@ input:focus {
   width: 603px;
 }
 
-.modal .line-top {
-  height: 393px;
-  left: 0px;
-  position: absolute;
-  top: 0px;
-  width: 604px;
-}
-
-.modal .line-25 {
-  height: 393px;
-  left: -1px;
-  position: absolute;
-  top: -1px;
-  width: 604px;
-}
-
 .modal .aboutStudent {
   height: 255px;
   left: 90px;
