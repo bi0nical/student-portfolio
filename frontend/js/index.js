@@ -1,5 +1,6 @@
 console.log("Frontend Javascript is linked!");
 
+
 document.querySelector("#input").addEventListener("keydown", (event) => {
     if (event.key == "Enter")
         apiRequest();
@@ -64,3 +65,4 @@ var settings = {
 $.ajax(settings).done(function(response) {
     console.log(response);
 });
+

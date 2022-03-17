@@ -1,5 +1,32 @@
 
-
+//Primary Colors
 $black: #04040A !default;
 $purple: #313490 !default;
 $yellow: #F7D067 !default;
+
+
+:root { 
+  --black: #000000;
+  --white: #ffffff;
+ 
+  --font-size-l: 18px;
+  --font-size-m: 14px;
+  --font-size-s: 11px;
+ 
+  --font-family-montserrat: "Montserrat", Helvetica;
+}
+.montserrat-light-white-11px {
+  color: var(--white);
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 300;
+}
+
+.montserrat-bold-white-11px {
+  color: var(--white);
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 700;
+}
