@@ -6,6 +6,39 @@
   text-decoration: none;
 }
 
+.screen * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+.screen div {
+  -webkit-text-size-adjust: none;
+}
+
+.screen a {
+  display: contents;
+  text-decoration: none;
+}
+
+.container-center-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%;
+}
+
+.container-center-horizontal > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.valign-text-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 :root {
   --black: #000000;
   --white: #ffffff;
@@ -387,7 +420,6 @@ input:focus {
 }
 
 .modal .footerContent {
-  background-color: transparent;
   height: 28px;
   left: 92px;
   position: absolute;
@@ -396,7 +428,6 @@ input:focus {
 }
 
 .modal .yearDate {
-  background-color: transparent;
   height: 13px;
   left: 0px;
   letter-spacing: 0px;
@@ -409,7 +440,6 @@ input:focus {
 }
 
 .modal .web-ux-design {
-  background-color: transparent;
   height: 13px;
   left: 0px;
   letter-spacing: 0px;
@@ -430,7 +460,6 @@ input:focus {
 }
 
 .modal .yoobee {
-  background-color: transparent;
   height: 13px;
   left: 0px;
   letter-spacing: 0px;
@@ -443,7 +472,6 @@ input:focus {
 }
 
 .modal .college-of-creative-innovation {
-  background-color: transparent;
   height: 13px;
   left: 0px;
   letter-spacing: 0px;
@@ -456,7 +484,6 @@ input:focus {
 }
 
 .modal .nav {
-  background-color: transparent;
   height: 82px;
   left: 1231px;
   position: absolute;
@@ -465,7 +492,6 @@ input:focus {
 }
 
 .modal .home {
-  background-color: transparent;
   height: 13px;
   left: 71px;
   letter-spacing: 0px;
@@ -478,7 +504,6 @@ input:focus {
 }
 
 .modal .about-our-class {
-  background-color: transparent;
   height: 13px;
   left: 0px;
   letter-spacing: 0px;
@@ -491,7 +516,6 @@ input:focus {
 }
 
 .modal .add-a-project {
-  background-color: transparent;
   height: 13px;
   left: 17px;
   letter-spacing: 0px;
@@ -504,7 +528,6 @@ input:focus {
 }
 
 .modal .contact-yoobee {
-  background-color: transparent;
   height: 13px;
   left: 3px;
   letter-spacing: 0px;
@@ -517,7 +540,6 @@ input:focus {
 }
 
 .modal .line02 {
-  background-color: transparent;
   height: 42px;
   left: 305px;
   position: absolute;
@@ -526,7 +548,6 @@ input:focus {
 }
 
 .modal .class-of-july-22 {
-  background-color: transparent;
   height: 14px;
   left: 93px;
   mix-blend-mode: normal;
@@ -556,37 +577,4 @@ input:focus {
 .screen textarea:focus,
 .screen input:focus {
   outline: none;
-}
-
-.screen * {
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-}
-
-.screen div {
-  -webkit-text-size-adjust: none;
-}
-
-.screen a {
-  display: contents;
-  text-decoration: none;
-}
-
-.container-center-horizontal {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  pointer-events: none;
-  width: 100%;
-}
-
-.container-center-horizontal > * {
-  flex-shrink: 0;
-  pointer-events: auto;
-}
-
-.valign-text-middle {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
