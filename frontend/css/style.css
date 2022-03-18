@@ -304,11 +304,11 @@
 }
 
 .gallery-tools {
-  padding: 3rem 5rem;
   min-height: 85vh;
 }
 .gallery-tools__header {
   width: 100%;
+  padding: 3rem 5rem;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -358,6 +358,10 @@
 .gallery-tools__header .header-right__btn:hover {
   background-color: #313490;
   color: white;
+}
+.gallery-tools__main {
+  padding: 0rem 5rem;
+  padding-bottom: 5rem;
 }
 .gallery-tools__main .gallery-tools__container .heading-container {
   width: 100%;
@@ -420,6 +424,9 @@
 }
 .gallery-tools__main .accordion-container .delete {
   margin-right: 0;
+}
+.gallery-tools__main .accordion-container .form-control {
+  resize: none;
 }
 
 .footer {

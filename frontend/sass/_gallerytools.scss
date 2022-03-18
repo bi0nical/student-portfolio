@@ -1,10 +1,9 @@
 .gallery-tools{
-
-    padding: 3rem 5rem;
     min-height: 85vh;
 
     &__header{
         width: 100%;
+        padding: 3rem 5rem;
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
@@ -69,10 +68,11 @@
 
 
     &__main{
-        // width: 100%;
+        
+        padding: 0rem 5rem;
+        padding-bottom: 5rem;
 
         .gallery-tools__container{
-            // width: 100%;
 
             .heading-container{
                 width: 100%;
@@ -105,6 +105,7 @@
         }
         
         .accordion{
+
 
             &-container{
                 display: flex;
@@ -151,10 +152,11 @@
                 .delete{
                     margin-right: 0;
                 }
-            }
 
-
-            
+                .form-control{
+                    resize: none
+                }
+            }           
 
         }
     }
