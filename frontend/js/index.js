@@ -6,6 +6,7 @@ console.log("Frontend Javascript is linked!");
 
 $(document).ready(function() {
 
+
     // Get Mongo config info
     let url;
     $.ajax({
@@ -176,7 +177,3 @@ $(document).ready(function() {
 //         }
 //     }),
 // };
-
-// $.ajax(settings).done(function(response) {
-//     console.log(response);
-// });
