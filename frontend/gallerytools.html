@@ -28,11 +28,11 @@
                     <p class="yoobee-info__subheading">College of Creative Innovation</p>
                 </div>
             </div>
-
+            
             <div class="header-right">
-                <button class="header-right__btn" id="returnHomeBtn">BACK TO HOME</button>
-                <button class="header-right__btn" id="galleryToolsBtn">GALLERY TOOLS</button>
-            </div>
+                    <button class="header-right__btn" id="returnHomeBtn">BACK TO HOME</button>
+                    <button class="header-right__btn" id="galleryToolsBtn">GALLERY TOOLS</button>
+                </div>
         </div>
 
 
@@ -135,8 +135,82 @@
                         </div>
                         <!-- end of delete project form -->
 
+                        <!-- add project form -->
+                        <div class="add-project-form">
+                            <div class="form-group">
+                                <label for="projectTitle">Project Title:</label>
+                                <input type="text" class="form-control" id="projectTitle" placeholder="Enter your project title">
+                            </div>
 
-                    </div>
+                            <div class="form-group">
+                                <label for="projectDescription">Project Description:</label>
+                                <textarea type="text" class="form-control" id="projectDescription" placeholder="Enter your project description"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="imageUrl">Project Image URL:</label>
+                                <input type="text" class="form-control" id="imageUrl" placeholder="Enter your image url here">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="authorName">Author Name/s:</label>
+                                <input type="text" class="form-control" id="authorName" placeholder="Project author">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="projectLink">Project Link:</label>
+                                <input type="text" class="form-control" id="projectLink" placeholder="Add a link to your project!">
+                            </div>
+
+                            <button type="submit" class="addProjectBtn">ADD TO GALLERY</button>
+                        </div>
+                        <!-- end of add project form -->
+
+                        <!-- update project form -->
+                        <div class="update-project-form">
+                            <div class="form-group">
+                                <label for="projectID">Project ID:</label>
+                                <input type="text" class="form-control" id="projectID" placeholder="Enter the ID of your project">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="newProjectTitle">Project Title:</label>
+                                <input type="text" class="form-control" id="newProjectTitle" placeholder="Enter your project title here">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="newProjectDescription">Project Description:</label>
+                                <textarea type="text" class="form-control" id="newProjectDescription" placeholder="Enter your project description"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="newImageUrl">Project Image URL:</label>
+                                <input type="text" class="form-control" id="newImageUrl" placeholder="Enter your image url here">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="newAuthorName">Author Name/s:</label>
+                                <input type="text" class="form-control" id="newAuthorName" placeholder="Project author">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="newProjectLink">Project Link:</label>
+                                <input type="text" class="form-control" id="newProjectLink" placeholder="Add a link to your project!">
+                            </div>
+
+                            <button type="submit" class="updateProjectBtn">UPDATE PROJECT</button>
+                        </div>
+                        <!-- end of update form -->
+
+                        <!-- delete project form -->
+                        <div class="delete-project-form">
+                            <div class="form-group">
+                                <label for="deleteProjectId">Project ID:</label>
+                                <input type="text" class="form-control" id="deleteProjectId" placeholder="Enter project ID here">
+                            </div>
+
+                            <button type="submit" class="deleteProjectBtn">DELETE PROJECT</button>
+                        </div>
                 </div>
 
             </div>
@@ -177,7 +251,7 @@
     <script src="https://kit.fontawesome.com/c64c3c1a97.js" crossorigin="anonymous"></script>
     <script src="./node_modules/jquery/dist/jquery.min.js"></script>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/frontend/js/index.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 
 </html>

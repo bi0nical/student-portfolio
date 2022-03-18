@@ -1,5 +1,10 @@
 console.log("Frontend Javascript is linked!");
 
+
+// ==============================================
+// Start of database tools
+// ==============================================
+
 $(document).ready(function() {
 
     // Get Mongo config info
@@ -17,7 +22,101 @@ $(document).ready(function() {
         }
     })
 
+    // Add a new project
+    $(".addProjectBtn").click(function() {
+        event.preventDefault();
+        let projectTitle = $("#projectTitle").val();
+        let projectDescription = $("#projectDescription").val();
+        let imageUrl = $("#imageUrl").val();
+        let authorName = $("#authorName").val();
+        let projectUrl = $("#projectLink").val();
+        console.log(projectTitle, projectDescription, imageUrl, authorName, projectUrl);
+        if (projectTitle === "" || projectDescription === "" || imageUrl === "" || authorName === "" || projectUrl === "") {
+            alert("Please enter all project details before submitting");
+        } else {
+            $.ajax({
+                url: `http://${url}/addProject`,
+                type: "POST",
+                data: {
+                    project_name: projectTitle,
+                    project_description: projectDescription,
+                    author: authorName,
+                    img_url: imageUrl,
+                    project_url: projectUrl
+                },
+                success: function(project) {
+                    console.log(project);
+                    alert("Project added");
+                },
+                error: function() {
+                    console.log("Can't call API");
+                }
+            }) // end of ajax
+        } // end of if
+    })
+    // end of add new project
+
+    // Update a project
+    $(".updateProjectBtn").click(function() {
+        event.preventDefault();
+        let projectId = $("#projectID").val();
+        let projectTitle = $("#newProjectTitle").val();
+        let projectDescription = $("#newProjectDescription").val();
+        let imageUrl = $("#newImageUrl").val();
+        let authorName = $("#newAuthorName").val();
+        let projectUrl = $("#newProjectLink").val();
+        console.log(projectId, projectTitle, projectDescription, imageUrl, authorName, projectUrl);
+        if (projectId === "") {
+            alert("Please provide a project ID for updating");
+        } else {
+            $.ajax({
+                url: `http://${url}/updateProject/${projectId}`,
+                type: "PATCH",
+                data: {
+                    project_name: projectTitle,
+                    project_description: projectDescription,
+                    author: authorName,
+                    img_url: imageUrl,
+                    project_url: projectUrl
+                },
+                success: function(data) {
+                    console.log(data);
+                    alert("Project has been updated");
+                },
+                error: function() {
+                    console.log("Cannot update project");
+                }
+            }) // end of ajax
+        } // end of if
+    })
+    // end of update project
+
+    // Delete a project
+    $(".deleteProjectBtn").click(function() {
+        event.preventDefault();
+        let projectId = $("#deleteProjectId").val();
+        console.log(projectId);
+        if (projectId === "") {
+            alert("Please provide an project ID to delete");
+        } else {
+            $.ajax({
+                url: `http://${url}/deleteProject/${projectId}`,
+                type: "DELETE",
+                success: function() {
+                    console.log("Deleted project");
+                    $("#deleteProjectId").val("");
+                    alert("Product successfully deleted");
+                },
+                error: function() {
+                    console.log("Error! Cannot call API");
+                }
+            }) // end of ajax
+        } // end of if
+    })
 })
+// end of delete project
+
+
 
 
 
@@ -97,4 +196,5 @@ $(".update").on("click", function() {
 
 //         }
 //     }),
+// };)     //     }),
 // };)
