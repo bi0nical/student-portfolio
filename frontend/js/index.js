@@ -1,11 +1,11 @@
 console.log("Frontend Javascript is linked!");
 
+
 // ==============================================
 // Start of database tools
 // ==============================================
 
 $(document).ready(function() {
-
 
     // Get Mongo config info
     let url;
@@ -113,8 +113,28 @@ $(document).ready(function() {
             }) // end of ajax
         } // end of if
     })
-    // end of delete project
+})
+// end of delete project
 
+
+
+
+
+// ----------------------
+// accordion functionality
+// ----------------------
+
+$(".choice").on("click", function() {
+    console.log("test");
+    $(".choice").removeClass("expand");
+    $(".choice").addClass("small");
+    $(this).removeClass("small");
+    $(this).addClass("expand");
+})
+
+$(".update").on("click", function() {
+
+    console.log("clicked")
 })
 
 // document.querySelector("#input").addEventListener("keydown", (event) => {
@@ -176,4 +196,5 @@ $(document).ready(function() {
 
 //         }
 //     }),
-// };
+// };)     //     }),
+// };)

@@ -1,11 +1,15 @@
 .gallery-tools{
 
-    &__header{
+    padding: 3rem 5rem;
+    min-height: 85vh;
 
+    &__header{
+        width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-
+        padding-bottom: 5rem;
+        margin: 0;
 
         .header-left{
 
@@ -37,11 +41,15 @@
         .header-right{
 
             display: flex;
-            height: auto;
+            justify-content: flex-end;
+            align-items: center;
+            height: 100%;
+            margin: 0;
+            padding: 0;
 
 
             &__btn{
-                padding: 0 1rem;
+                padding: .75rem 1rem;
                 min-height: 100%;
                 margin-left: 1.5rem;
                 background: none;
@@ -61,7 +69,94 @@
 
 
     &__main{
+        // width: 100%;
+
+        .gallery-tools__container{
+            // width: 100%;
+
+            .heading-container{
+                width: 100%;
+                display: flex;
+                padding-bottom: 2rem;
+
+                .heading{
+                    width: fit-content;
+                    float: left;
+                    white-space: nowrap;
+                    padding-right: 2rem;
+
+                    h1{
+                        @include page-heading;
+                        // flex-wrap: nowrap;
+                    }
+
+                }
+                
+
+                .line-detail{
+                    width: 100%;
+                    float: right;
+                    border-top: 2px solid $purple;
+                    border-right: 2px solid $purple;
+                    margin-top: .5rem;
+                    margin-bottom: .5rem;
+                }
+            }
+        }
         
+        .accordion{
+
+            &-container{
+                display: flex;
+                width: 100%;
+                padding: 0;
+
+                .choice{
+                    height: 30rem;
+                    box-sizing: border-box;
+                    padding: 1rem;
+                    overflow: hidden;
+                    float: left;
+                    align-items: center;
+                    transition: width 0.2s;
+                    border-radius:3px;
+                }
+                
+                .expand{
+                    width :100%;
+                }
+               
+                .small{
+                    width: 10rem;
+                    margin: 0 1rem;
+                    background-color: $purple !important;
+                }
+
+                .small>div{
+                    opacity: 0;
+                }
+                
+                .unset > div > p{
+                    opacity: 0;
+                }
+                
+                .expand > div {
+                    transition-delay:  200ms;
+                    opacity: 1;
+                }
+
+                .add{
+                    margin-left: 0;
+                }
+                .delete{
+                    margin-right: 0;
+                }
+            }
+
+
+            
+
+        }
     }
 
 }
