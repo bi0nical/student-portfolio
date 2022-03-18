@@ -4,3 +4,510 @@
   box-sizing: border-box;
   text-decoration: none;
 }
+
+@font-face {
+  font-family: "Clara Antiqua";
+  src: url("../fonts/ClaraAntiqua.otf");
+}
+/* screen - modal */
+.screen * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+.screen div {
+  -webkit-text-size-adjust: none;
+}
+
+.screen a {
+  display: contents;
+  text-decoration: none;
+}
+
+.container-center-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%;
+}
+
+.container-center-horizontal > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.valign-text-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.modal {
+  background-color: var(--white);
+  height: 1271px;
+  mix-blend-mode: normal;
+  overflow: hidden;
+  overflow-x: hidden;
+  position: relative;
+  width: 1440px;
+  display: flex;
+}
+
+.modal .container-modal {
+  height: 393px;
+  left: 737px;
+  position: absolute;
+  top: 369px;
+  width: 603px;
+}
+
+.modal .aboutStudent {
+  height: 255px;
+  left: 90px;
+  position: absolute;
+  top: 370px;
+  width: 599px;
+}
+
+.modal .lorem-ipsum {
+  background-color: transparent;
+  color: #03030a;
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 300;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0px;
+  line-height: 26px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  width: 597px;
+}
+
+.modal .mockup {
+  height: 393px;
+  left: 737px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 370px;
+  width: 603px;
+}
+
+.modal .plant-me {
+  height: 53px;
+  left: 91px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: absolute;
+  top: 216px;
+  width: 371px;
+}
+
+.modal .justine-derrick {
+  background-color: transparent;
+  color: #03030a;
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 700;
+  height: 22px;
+  left: 91px;
+  letter-spacing: 0px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 718px;
+  width: auto;
+}
+
+.modal .footerContainer {
+  height: 274px;
+  left: 0px;
+  position: absolute;
+  top: 997px;
+  width: 1440px;
+}
+
+.modal .footerBackground {
+  background-color: #313490;
+  height: 274px;
+  left: 0px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 0px;
+  width: 1440px;
+}
+
+.modal .footerContent {
+  height: 28px;
+  left: 92px;
+  position: absolute;
+  top: 158px;
+  width: 100px;
+}
+
+.modal .yearDate {
+  height: 13px;
+  left: 0px;
+  letter-spacing: 0px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: center;
+  top: 0px;
+  width: auto;
+}
+
+.modal .web-ux-design {
+  height: 13px;
+  left: 0px;
+  letter-spacing: 0px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: center;
+  top: 15px;
+  width: auto;
+}
+
+.modal .subContent {
+  height: 28px;
+  left: 92px;
+  position: absolute;
+  top: 196px;
+  width: 167px;
+}
+
+.modal .yoobee {
+  height: 13px;
+  left: 0px;
+  letter-spacing: 0px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: center;
+  top: 0px;
+  width: auto;
+}
+
+.modal .college-of-creative-innovation {
+  height: 13px;
+  left: 0px;
+  letter-spacing: 0px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: center;
+  top: 15px;
+  width: auto;
+}
+
+.modal .nav {
+  height: 82px;
+  left: 1231px;
+  position: absolute;
+  top: 50px;
+  width: 116px;
+}
+
+.modal .home {
+  height: 13px;
+  left: 71px;
+  letter-spacing: 0px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: center;
+  top: 0px;
+  width: auto;
+}
+
+.modal .about-our-class {
+  height: 13px;
+  left: 0px;
+  letter-spacing: 0px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: center;
+  top: 23px;
+  width: auto;
+}
+
+.modal .add-a-project {
+  height: 13px;
+  left: 17px;
+  letter-spacing: 0px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: center;
+  top: 46px;
+  width: auto;
+}
+
+.modal .contact-yoobee {
+  height: 13px;
+  left: 3px;
+  letter-spacing: 0px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: center;
+  top: 69px;
+  width: auto;
+}
+
+.modal .line02 {
+  height: 42px;
+  left: 305px;
+  position: absolute;
+  top: 181px;
+  width: 1034px;
+}
+
+.modal .class-of-july-22 {
+  height: 14px;
+  left: 93px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 94px;
+  width: 108px;
+}
+
+.modal .logo-footer {
+  height: 29px;
+  left: 93px;
+  position: absolute;
+  top: 50px;
+  width: 400px;
+}
+
+.modal .logoFooter {
+  height: 29px;
+  left: 0px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  width: 400px;
+}
+
+.screen textarea:focus,
+.screen input:focus {
+  outline: none;
+}
+
+.gallery-tools {
+  padding: 3rem 5rem;
+  min-height: 85vh;
+}
+.gallery-tools__header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 5rem;
+  margin: 0;
+}
+.gallery-tools__header .header-left {
+  display: flex;
+  height: fit-content;
+}
+.gallery-tools__header .header-left .course-info, .gallery-tools__header .header-left .yoobee-info {
+  margin-right: 3rem;
+}
+.gallery-tools__header .header-left .course-info__heading, .gallery-tools__header .header-left .yoobee-info__heading {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.2rem;
+}
+.gallery-tools__header .header-left .course-info__subheading, .gallery-tools__header .header-left .yoobee-info__subheading {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 0.8rem;
+  line-height: 0.8rem;
+  color: #313490;
+  margin: 0;
+}
+.gallery-tools__header .header-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.gallery-tools__header .header-right__btn {
+  padding: 0.75rem 1rem;
+  min-height: 100%;
+  margin-left: 1.5rem;
+  background: none;
+  border: solid 3px #313490;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 0.8rem;
+  line-height: 0.8rem;
+}
+.gallery-tools__header .header-right__btn:hover {
+  background-color: #313490;
+  color: white;
+}
+.gallery-tools__main .gallery-tools__container .heading-container {
+  width: 100%;
+  display: flex;
+  padding-bottom: 2rem;
+}
+.gallery-tools__main .gallery-tools__container .heading-container .heading {
+  width: fit-content;
+  float: left;
+  white-space: nowrap;
+  padding-right: 2rem;
+}
+.gallery-tools__main .gallery-tools__container .heading-container .heading h1 {
+  font-family: "Clara Antiqua", sans-serif;
+  font-size: 4.5rem;
+}
+.gallery-tools__main .gallery-tools__container .heading-container .line-detail {
+  width: 100%;
+  float: right;
+  border-top: 2px solid #313490;
+  border-right: 2px solid #313490;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.gallery-tools__main .accordion-container {
+  display: flex;
+  width: 100%;
+  padding: 0;
+}
+.gallery-tools__main .accordion-container .choice {
+  height: 30rem;
+  box-sizing: border-box;
+  padding: 1rem;
+  overflow: hidden;
+  float: left;
+  align-items: center;
+  transition: width 0.2s;
+  border-radius: 3px;
+}
+.gallery-tools__main .accordion-container .expand {
+  width: 100%;
+}
+.gallery-tools__main .accordion-container .small {
+  width: 10rem;
+  margin: 0 1rem;
+  background-color: #313490 !important;
+}
+.gallery-tools__main .accordion-container .small > div {
+  opacity: 0;
+}
+.gallery-tools__main .accordion-container .unset > div > p {
+  opacity: 0;
+}
+.gallery-tools__main .accordion-container .expand > div {
+  transition-delay: 200ms;
+  opacity: 1;
+}
+.gallery-tools__main .accordion-container .add {
+  margin-left: 0;
+}
+.gallery-tools__main .accordion-container .delete {
+  margin-right: 0;
+}
+
+.footer {
+  padding: 4rem 5rem;
+  min-height: 15rem;
+  background-color: #313490;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+}
+.footer__top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.footer__top-left h2 {
+  font-family: "Clara Antiqua", sans-serif;
+  font-size: 4.5rem;
+  font-size: 3rem;
+}
+.footer__top-left h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+}
+.footer__top-right {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 0.9rem;
+  line-height: 1.8rem;
+}
+.footer__top-right a:hover {
+  font-weight: 700;
+  cursor: pointer;
+}
+.footer__bottom {
+  margin-top: 3rem;
+  display: flex;
+  width: 100%;
+  padding-bottom: 1rem;
+}
+.footer__bottom-left {
+  width: fit-content;
+}
+.footer__bottom-left .course-info {
+  padding-right: 4rem;
+}
+.footer__bottom-left .course-info h4 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  padding-bottom: 0.1rem;
+  white-space: nowrap;
+}
+.footer__bottom-left .course-info p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 0.7rem;
+  margin: 0;
+  white-space: nowrap;
+}
+.footer__bottom-left .yoobee-info {
+  padding-right: 5rem;
+  padding-top: 1rem;
+}
+.footer__bottom-left .yoobee-info h4 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  padding-bottom: 0.1rem;
+  white-space: nowrap;
+}
+.footer__bottom-left .yoobee-info p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 0.7rem;
+  margin: 0;
+  white-space: nowrap;
+}
+.footer__bottom-right {
+  width: 100%;
+  border-bottom: 1px solid white;
+  border-right: 1px solid white;
+  margin-bottom: 0.25rem;
+}

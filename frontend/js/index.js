@@ -1,6 +1,6 @@
 console.log("Frontend Javascript is linked!");
 
-$(document).ready(function(){
+$(document).ready(function() {
 
     // Get Mongo config info
     let url;
@@ -8,15 +8,34 @@ $(document).ready(function(){
         url: "config.json",
         type: "GET",
         dataType: "json",
-        success: function(configData){
+        success: function(configData) {
             url = `${configData.SERVER_URL}:${configData.SERVER_PORT}`;
             console.log(url);
         },
-        error: function(error){
+        error: function(error) {
             console.log(error);
         }
     })
 
+})
+
+
+
+// ----------------------
+// accordion functionality
+// ----------------------
+
+$(".choice").on("click", function() {
+    console.log("test");
+    $(".choice").removeClass("expand");
+    $(".choice").addClass("small");
+    $(this).removeClass("small");
+    $(this).addClass("expand");
+})
+
+$(".update").on("click", function() {
+
+    console.log("clicked")
 })
 
 // document.querySelector("#input").addEventListener("keydown", (event) => {
@@ -78,4 +97,4 @@ $(document).ready(function(){
 
 //         }
 //     }),
-// };
+// };)
