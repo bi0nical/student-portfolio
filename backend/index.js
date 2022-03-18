@@ -52,9 +52,10 @@ app.post("/addProject", (req,res) => {
     const dbProject = new Project({
         _id: new mongoose.Types.ObjectId,
         project_name: req.body.project_name,
+        project_description: req.body.project_description,
         author: req.body.author,
         img_url: req.body.img_url,
-        porfolio_url: req.body.portfolio_url
+        project_url: req.body.project_url
     }); // end of const
     dbProject.save().then(result => {
         res.send(result);
@@ -68,9 +69,10 @@ app.patch('/updateProject/:id', (req,res) => {
     Project.findById(idParam, (err, project) => {
         const updatedProject = {
             project_name: req.body.project_name,
+            project_description: req.body.project_description,
             author: req.body.author,
             img_url: req.body.img_url,
-            portfolio_url: req.body.porfolio_url
+            project_url: req.body.porfolio_url
         } // end of const
         Project.updateOne({_id: idParam}, updatedProject)
             .then(result => {res.send(result)})
