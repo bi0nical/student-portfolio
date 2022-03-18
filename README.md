@@ -8,7 +8,6 @@
 4. CD into the backend directory and run the command "npm install".
 5. CD into the frontend directory and run "npm install" again. You should see a directory called "node_modules" appear.
 
-
 ## Packages
 
 ### Frontend
@@ -24,9 +23,9 @@
 - gulp-sass
 - js-beautify
 
-*Gulp* is used to compile scss files into css while beautifying html/css/js files automatically. Ensure that you run the command "gulp watch" when working on files so that this works as intended.
+_Gulp_ is used to compile scss files into css while beautifying html/css/js files automatically. Ensure that you run the command "gulp watch" when working on files so that this works as intended.
 
-*Note:* There are double-ups with the beautifiers that will be removed later.
+_Note:_ There are double-ups with the beautifiers that will be removed later.
 
 ### Backend
 
@@ -37,3 +36,12 @@
 - jquery
 - mongoose
 - nodemon
+
+### Typography Color Style
+
+- Clara Antiqua - All Caps
+- Montserrat Light- All Caps
+- Body Montserrat - Light
+- Primary Color - #313490
+- Secondary Color #F7D067
+- Secondary Color #04040A

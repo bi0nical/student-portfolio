@@ -1,0 +1,112 @@
+.footer{
+    padding: 4rem 5rem;
+    min-height: 15rem;
+    background-color: $purple;
+    color: white;
+    // position: fixed;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+
+    &__top{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        &-left{
+            
+            h2{
+                @include page-heading;
+                font-size: 3rem;
+            }
+
+            h3{             
+                font-family: $content-font;
+                font-weight: $body-font-weight;
+                font-size: 1rem;
+            }
+        }
+
+        &-right{
+            display: flex;
+            flex-direction: column;
+            text-align: right;
+            font-family: $content-font;
+            font-weight: $body-font-weight;
+            font-size: .9rem;
+            line-height: 1.8rem;
+
+            a{
+                &:hover{
+                    font-weight: $content-heading-weight;
+                    cursor: pointer;
+                }
+            }
+        }
+
+    }
+
+    &__bottom{
+
+        margin-top: 3rem;
+        display: flex;
+        width: 100%;
+        padding-bottom: 1rem;
+            
+
+        &-left{
+            // display: flex;
+            width: fit-content;
+           
+            .course-info{
+                padding-right: 4rem;
+                
+                h4{
+                    font-family: $content-font;
+                    font-weight: $content-heading-weight;
+                    font-size: 1rem;
+                    padding-bottom: .1rem;
+                    white-space: nowrap;
+                }
+
+                p{
+                    font-family: $content-font;
+                    font-weight: $body-font-weight;
+                    font-size: .7rem;
+                    margin: 0;
+                    white-space: nowrap;
+                }
+            }
+
+            .yoobee-info{
+                padding-right: 5rem;
+                padding-top: 1rem;
+                
+                h4{
+                    font-family: $content-font;
+                    font-weight: $content-heading-weight;
+                    font-size: 1rem;
+                    padding-bottom: .1rem;
+                    white-space: nowrap;
+                }
+
+                p{
+                    font-family: $content-font;
+                    font-weight: $body-font-weight;
+                    font-size: .7rem;
+                    margin: 0;
+                    white-space: nowrap;
+                }
+            }
+        }
+
+        &-right{
+            width: 100%;
+            border-bottom: 1px solid white;
+            border-right: 1px solid white;
+            margin-bottom: .25rem;
+        }
+    }
+}
