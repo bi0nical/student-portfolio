@@ -46,6 +46,11 @@ $(document).ready(function() {
                 },
                 success: function(project) {
                     console.log(project);
+                    $("#projectTitle").val("");
+                    $("#projectDescription").val("");
+                    $("#imageUrl").val("");
+                    $("#authorName").val("");
+                    $("#projectLink").val("");
                     alert("Project added");
                 },
                 error: function() {
