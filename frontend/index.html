@@ -1,114 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1440, maximum-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <title>Student Work</title>
 </head>
 
 <body>
-    <main>
-        <header>
-            <div class="container">
-                <div id="header">
-                    <img src="/img/logo.png">
-                    <div id="search_box">
-                        <input id="input" type="text" placeholder="Search..."><i id="search" class="fas fa-search"></i>
-                    </div>
+
+    <header>
+        <div class="container-search">
+            <div id="header">
+                <h1>Student Portfolio</h1>
+                <div id="search_box">
+                    <input id="input" type="text" placeholder="Search..."><i id="search" class="fas fa-search"></i>
                 </div>
             </div>
-        </header>
+        </div>
+    </header>
 
-        <section>
-            <div class="container">
-                <div id="grid"></div>
-            </div>
-        </section>
+    <section>
+        <div class="container">
+            <div id="grid"></div>
+        </div>
+    </section>
 
+
+    <main class="container">
+        <div class="row">
+            <div id="searchResults"></div>
+        </div>
+
+        <!--start gallery-->
 
         <input type="hidden" id="anPageName" name="page" value="gallery" />
         <div class="container-center-horizontal">
             <div class="gallery screen">
                 <div class="flex-col">
                     <div class="flex-row">
-                        <img class="logo" src="/img/logo.png" />
-                        <img class="line-top" src="/img/line-top.png" />
+                        <img class="logo" src="img/logo.png" />
+                        <img class="line-top" src="img/line-top.png" />
                     </div>
-                    <img class="class22" src="/img/class22.png" />
+                    <p>Class of July '22</p>
                 </div>
 
                 <div class="flex-row-1">
                     <div class="flex-col-1">
                         <div class="overlap-group">
                             <p class="about">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non tortor finibus dolor bibendum
-                                tempus ut et metus. Curabitur id egestas nulla. Sed ante nisl, euismod eu venenatis eu, bibendum a
-                                neque. Integer velit urna, varius sed tempor et, accumsan lacinia leo. Duis ac metus mattis, congue
-                                lorem nec, vulputate neque. Sed dapibus, massa ut dictum tincidunt, diam ex fermentum mauris, at gravida
-                                nunc metus sit amet orci.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non tortor finibus dolor bibendum tempus
+                                ut et metus. Curabitur id egestas nulla. Sed ante nisl, euismod eu venenatis eu, bibendum a neque.
+                                Integer velit urna, varius sed tempor et, accumsan lacinia leo. Duis ac metus mattis, congue lorem nec,
+                                vulputate neque. Sed dapibus, massa ut dictum tincidunt, diam ex fermentum mauris, at gravida nunc metus
+                                sit amet orci.
                             </p>
                             <div class="add-your-project valign-text-middle">ADD YOUR PROJECT</div>
-                            <img class="arrow-about" src="/img/arrow-1.png" />
+                            <!-- <img class="arrow-about" src="img/arrow-1@2x.png" /> -->
                         </div>
                         <div class="flex-row-2">
                             <div class="class-container">
 
                                 <div class="class-01">
-                                    <img class="student-work-01" src="/img/student-work-01.png" />
+                                    <img class="student-work-01" src="img/student-work-01.png" />
                                     <div class="flex-row-3">
                                         <div class="qual-assist valign-text-middle montserrat-bold-black-18px">QualAssist</div>
-                                        <img class="arrow" src="/img/arrow-1.png" />
+                                        <img class="arrow" src="img/arrow-1.png" />
                                     </div>
                                     <div class="name montserrat-light-black-11px">Justine Derrick</div>
                                 </div>
 
                                 <div class="class-02">
-                                    <img class="student-work01" src="/img/student-work01.png" />
+                                    <img class="student-work01" src="img/student-work01.png" />
                                     <div class="flex-row-4">
-                                        <div class="student-name valign-text-middle montserrat-bold-black-18px">informative
-                                        </div>
-                                        <img class="arrow" src="/img/arrow-1.png" />
+                                        <div class="student-name valign-text-middle montserrat-bold-black-18px">informative</div>
+                                        <img class="arrow" src="img/arrow-1.png" />
                                     </div>
                                     <div class="name-1 montserrat-light-black-11px">Justine Derrick</div>
                                 </div>
 
                                 <div class="class-03">
-                                    <img class="student-work-05" src="/img/student-work-05.png" />
+                                    <img class="student-work-05" src="img/student-work-05.png" />
                                     <div class="flex-row-5">
                                         <div class="project-container">
-                                            <div class="project-name valign-text-middle montserrat-bold-black-18px">Project Name
-                                            </div>
+                                            <div class="project-name valign-text-middle montserrat-bold-black-18px">Project Name</div>
                                             <div class="project-author-1 montserrat-light-black-11px">Project Author</div>
                                         </div>
-                                        <img class="arrow-12" src="/img/arrow-1.png" />
+                                        <img class="arrow-12" src="img/arrow-1.png" />
                                     </div>
                                 </div>
 
                                 <div class="class-04">
-                                    <img class="student-work-18" src="/img/student-work-18.png" />
+                                    <img class="student-work-18" src="img/student-work-18.png" />
                                     <div class="flex-row-6">
                                         <div class="project-container">
-                                            <div class="project-name valign-text-middle montserrat-bold-black-18px">Project Name
-                                            </div>
+                                            <div class="project-name valign-text-middle montserrat-bold-black-18px">Project Name</div>
                                             <div class="project-author-2 montserrat-light-black-11px">Project Author</div>
                                         </div>
-                                        <img class="arrow-14" src="/img/arrow-1.png" />
+                                        <img class="arrow-14" src="img/arrow-1.png" />
                                     </div>
                                 </div>
 
                                 <div class="class-05">
-                                    <img class="student-work-14" src="/img/student-work-14.png" />
+                                    <img class="student-work-14" src="img/student-work-14.png" />
                                     <div class="flex-row-7">
                                         <div class="project-container">
-                                            <div class="project-name valign-text-middle montserrat-bold-black-18px">Project Name
-                                            </div>
+                                            <div class="project-name valign-text-middle montserrat-bold-black-18px">Project Name</div>
                                             <div class="project-author-3 montserrat-light-black-11px">Project Author</div>
                                         </div>
-                                        <img class="arrow-1-1" src="/img/arrow-1.png" />
+                                        <img class="arrow-1-1" src="img/arrow-1.png" />
                                     </div>
                                 </div>
                             </div>
@@ -116,54 +118,50 @@
                             <div class="flex-col-2 montserrat-light-black-11px">
 
                                 <div class="class-06">
-                                    <img class="student-work-02" src="/img/student-work-02.png" />
+                                    <img class="student-work-02" src="img/student-work-02.png" />
                                     <div class="flex-row-8">
                                         <div class="project-name-1 valign-text-middle montserrat-bold-black-18px">
                                             100% Pure Manaakitanga
                                         </div>
-                                        <img class="arrow-8" src="/img/arrow-1.png" />
+                                        <img class="arrow-8" src="img/arrow-1.png" />
                                     </div>
                                     <div class="name-2 montserrat-light-black-11px">Justine Derrick</div>
                                 </div>
 
                                 <div class="class-07">
-                                    <img class="smartmockups" src="/img/smartmockups.png" />
+                                    <img class="smartmockups" src="img/smartmockups.png" />
                                     <div class="flex-row-9">
-                                        <div class="real-fake-doors valign-text-middle montserrat-bold-black-18px">Real Fake
-                                            Doors</div>
-                                        <img class="arrow-11" src="/img/arrow-1.png" />
+                                        <div class="real-fake-doors valign-text-middle montserrat-bold-black-18px">Real Fake Doors</div>
+                                        <img class="arrow-11" src="img/arrow-1.png" />
                                     </div>
                                     <div class="auhor montserrat-light-black-11px">Group Project</div>
                                 </div>
 
                                 <div class="class-08">
-                                    <img class="student-work-12" src="/img/student-work-12.png" />
+                                    <img class="student-work-12" src="img/student-work-12.png" />
                                     <div class="flex-row-10">
                                         <div class="project-container">
-                                            <div class="project-name valign-text-middle montserrat-bold-black-18px">Project Name
-                                            </div>
+                                            <div class="project-name valign-text-middle montserrat-bold-black-18px">Project Name</div>
                                             <div class="project-author-4 montserrat-light-black-11px">Project Author</div>
                                         </div>
-                                        <img class="arrow-1" src="/img/arrow-1.png" />
+                                        <img class="arrow-1" src="img/arrow-1.png" />
                                     </div>
                                 </div>
 
                                 <div class="class-09">
-                                    <img class="student-work-22" src="/img/student-work-22.png" />
+                                    <img class="student-work-22" src="img/student-work-22.png" />
                                     <div class="flex-row-11">
-                                        <div class="project-name valign-text-middle montserrat-bold-black-18px">Project Name
-                                        </div>
-                                        <img class="arrow-2" src="/img/arrow-1.png" />
+                                        <div class="project-name valign-text-middle montserrat-bold-black-18px">Project Name</div>
+                                        <img class="arrow-2" src="img/arrow-1.png" />
                                     </div>
                                 </div>
                                 <div class="project-author">Project Author</div>
 
                                 <div class="class-10">
-                                    <img class="student-work-11" src="/img/student-work-11.png" />
+                                    <img class="student-work-11" src="img/student-work-11.png" />
                                     <div class="flex-row-12">
-                                        <div class="project-name-2 valign-text-middle montserrat-bold-black-18px">Project Name
-                                        </div>
-                                        <img class="arrow-2" src="/img/arrow-1.png" />
+                                        <div class="project-name-2 valign-text-middle montserrat-bold-black-18px">Project Name</div>
+                                        <img class="arrow-2" src="img/arrow-1.png" />
                                     </div>
                                 </div>
                                 <div class="project-author">Project Author</div>
@@ -173,57 +171,57 @@
                     <div class="ss-container">
 
                         <div class="calss-11">
-                            <img class="student-work-j" src="/img/student-work-15.png" />
+                            <img class="student-work-j" src="img/student-work-15.png" />
                             <div class="flex-row-13">
                                 <div class="x100-pure-manaakitanga valign-text-middle montserrat-bold-black-18px">
                                     100% Pure Manaakitanga
                                 </div>
-                                <img class="arrow-7" src="/img/arrow-1.png" />
+                                <img class="arrow-7" src="img/arrow-1.png" />
                             </div>
                             <div class="name-3 montserrat-light-black-11px">Justine Derrick</div>
                         </div>
 
                         <div class="class-12">
-                            <img class="student-work-04" src="/img/student-work-04.png" />
+                            <img class="student-work-04" src="img/student-work-04.png" />
                             <div class="flex-row-14">
                                 <div class="project-container">
                                     <div class="project-name valign-text-middle montserrat-bold-black-18px">Project Name</div>
                                     <div class="project-author-5 montserrat-light-black-11px">Project Author</div>
                                 </div>
-                                <img class="arrow-6" src="/img/arrow-1.png" />
+                                <img class="arrow-6" src="img/arrow-1.png" />
                             </div>
                         </div>
 
                         <div class="class-13">
-                            <img class="student-work-13" src="/img/student-work-13.png" />
+                            <img class="student-work-13" src="img/student-work-13.png" />
                             <div class="flex-row-15">
                                 <div class="project-container">
                                     <div class="project-name valign-text-middle montserrat-bold-black-18px">Project Name</div>
                                     <div class="project-author-6 montserrat-light-black-11px">Project Author</div>
                                 </div>
-                                <img class="arrow-1" src="/img/arrow-1.png" />
+                                <img class="arrow-1" src="img/arrow-1.png" />
                             </div>
                         </div>
 
                         <div class="class-14">
-                            <img class="student-work-17" src="/img/student-work-17.png" />
+                            <img class="student-work-17" src="img/student-work-17.png" />
                             <div class="flex-row-16">
                                 <div class="project-container">
                                     <div class="project-name valign-text-middle montserrat-bold-black-18px">Project Name</div>
                                     <div class="project-author-7 montserrat-light-black-11px">Project Author</div>
                                 </div>
-                                <img class="arrow-1" src="/img/arrow-1.png" />
+                                <img class="arrow-1" src="img/arrow-1.png" />
                             </div>
                         </div>
 
                         <div class="class-15">
-                            <img class="student-work-02-1" src="/img/student-work-022.png" />
+                            <img class="student-work-02-1" src="img/student-work-022.png" />
                             <div class="flex-row-17">
                                 <div class="project-container">
                                     <div class="project-name valign-text-middle montserrat-bold-black-18px">Project Name</div>
                                     <div class="project-author-8 montserrat-light-black-11px">Project Author</div>
                                 </div>
-                                <img class="arrow-1" src="/img/arrow-1.png" />
+                                <img class="arrow-1" src="img/arrow-1.png" />
                             </div>
                         </div>
                     </div>
@@ -233,18 +231,28 @@
     </main>
 
     <!--footer-->
-    <footer>
-        <div class="footer-container"></div>
+    <footer class="footer-container">
+        <div class="footer-page">
+            <ul>
+                <li><a>Class of July '22</a></li>
+                <br>
+                <li><a>Web & UX Design</a></li>
+                <li><a>YOOBEE</a></li>
+                <li><a>COllege of Creative Innovation</a></li>
+            </ul>
+        </div>
+        <div class="line-image">
+            <img src="./img/Rectangle bottom.png">
+        </div>
+        <ul class="footer-right">
+            <li><a>HOME</a></li>
+            <li><a>ABOUT OUR CLASS</a></li>
+            <li><a>ADD PROJECT</a></li>
+            <li><a>CONTACT YOOBEE</a></li>
+        </ul>
     </footer>
 
-
-
-    <script src="https://kit.fontawesome.com/c64c3c1a97.js" crossorigin="anonymous"></script>
     <script src="/frontend/js/index.js"></script>
-    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="./node_modules/@popperjs/core/dist/cjs/popper.js"></script>
-    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
 
 </html>

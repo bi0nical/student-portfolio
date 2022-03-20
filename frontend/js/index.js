@@ -42,26 +42,4 @@ loadImages = (data) => {
     }
 }
 
-var settings = {
-    "url": "https://api.unsplash.com/search/photos?query=student&client_id=jrK96VZ00Bo6HPnq3qB92xZwWk-hUjfs-q0azMy3p10",
-    "method": "GET",
-    "timeout": 0,
-    "headers": {
-        "Content-Type": "application/json"
-    },
-    "data": JSON.stringify({
-        "first_name": "",
-        "last_name": "",
-        "profile_image": "medium",
-        "portfolio_url": "",
-        "links": {
-            "photos": "",
-            "portfolio": "",
 
-        }
-    }),
-};
-
-$.ajax(settings).done(function(response) {
-    console.log(response);
-});
