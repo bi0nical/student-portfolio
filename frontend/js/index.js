@@ -1,6 +1,5 @@
 console.log("Frontend Javascript is linked!");
 
-
 // ==============================================
 // Start of database tools
 // ==============================================
