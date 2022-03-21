@@ -40,63 +40,136 @@ $(document).ready(function() {
                         // end of randomise order
 
                         // split array 
-                        const threePartIndex = Math.ceil(array.length / 3);
 
-                        const thirdPart = array.splice(-threePartIndex);
-                        const secondPart = array.splice(-threePartIndex);
-                        const firstPart = array;
-                        // end of split array
+                        let tablet = window.matchMedia("(min-width: 601px) and (max-width: 1023px)");
+                        let desktop = window.matchMedia("(min-width: 1024px)");
 
-                        for (let i = 0; i < firstPart.length; i++) {
-                            document.getElementById("resultsOne").innerHTML += `
-    
-                        <div class="card">
-                                <img class="card-img-top" src="${firstPart[i].img_url}" alt="Project Image">
-                                <div class="card-body-container">
-                                <div class="card-body">
-                                    <h5 class="card-title">${firstPart[i].project_name}</h5>
-                                    <h6 class="card-subtitle">${firstPart[i].author}</h6>     
-                                </div>              
-                                <button class="modal-btn" id="modalBtn"><i class="fa-solid fa-arrow-right-long"></i></button>  
-                                </div>  
-                        </div>
-    
-                        `
-                        }
+                        function splitArray(x, y) {
+                            if (x.matches) {
+                                const threePartIndex = Math.ceil(array.length / 3);
 
-                        for (let i = 0; i < secondPart.length; i++) {
-                            document.getElementById("resultsTwo").innerHTML += `
-    
-                        <div class="card">
-                                <img class="card-img-top" src="${secondPart[i].img_url}" alt="Project Image">
-                                <div class="card-body-container">
-                                <div class="card-body">
-                                    <h5 class="card-title">${secondPart[i].project_name}</h5>
-                                    <h6 class="card-subtitle">${secondPart[i].author}</h6>     
-                                </div>      
-                                <button class="modal-btn" id="modalBtn"><i class="fa-solid fa-arrow-right-long"></i></button>   
-                                </div>                         
-                        </div>
-    
-                        `
-                        }
+                                const thirdPart = array.splice(-threePartIndex);
+                                const secondPart = array.splice(-threePartIndex);
+                                const firstPart = array;
 
-                        for (let i = 0; i < thirdPart.length; i++) {
-                            document.getElementById("resultsThree").innerHTML += `
-    
-                        <div class="card">
-                                <img class="card-img-top" src="${thirdPart[i].img_url}" alt="Project Image">
-                                <div class="card-body-container">
-                                    <div class="card-body">
-                                        <h5 class="card-title">${thirdPart[i].project_name}</h5>
-                                        <h6 class="card-subtitle">${thirdPart[i].author}</h6>     
-                                    </div>  
-                                    <button class="modal-btn" id="modalBtn"><i class="fa-solid fa-arrow-right-long"></i></button>
+                                // end of split array
+
+                                for (let i = 0; i < firstPart.length; i++) {
+                                    document.getElementById("resultsOne").innerHTML += `
+            
+                                <div class="card">
+                                        <img class="card-img-top" src="${firstPart[i].img_url}" alt="Project Image">
+                                        <div class="card-body-container">
+                                        <div class="card-body">
+                                            <h5 class="card-title">${firstPart[i].project_name}</h5>
+                                            <h6 class="card-subtitle">${firstPart[i].author}</h6>     
+                                        </div>              
+                                        <button class="modal-btn" id="modalBtn"><i class="fa-solid fa-arrow-right-long"></i></button>  
+                                        </div>  
                                 </div>
-                        </div>
-    
-                        `
+            
+                                `
+                                }
+
+                                for (let i = 0; i < secondPart.length; i++) {
+                                    document.getElementById("resultsTwo").innerHTML += `
+            
+                                <div class="card">
+                                        <img class="card-img-top" src="${secondPart[i].img_url}" alt="Project Image">
+                                        <div class="card-body-container">
+                                        <div class="card-body">
+                                            <h5 class="card-title">${secondPart[i].project_name}</h5>
+                                            <h6 class="card-subtitle">${secondPart[i].author}</h6>     
+                                        </div>      
+                                        <button class="modal-btn" id="modalBtn"><i class="fa-solid fa-arrow-right-long"></i></button>   
+                                        </div>                         
+                                </div>
+            
+                                `
+                                }
+
+                                for (let i = 0; i < thirdPart.length; i++) {
+                                    document.getElementById("resultsThree").innerHTML += `
+            
+                                <div class="card">
+                                        <img class="card-img-top" src="${thirdPart[i].img_url}" alt="Project Image">
+                                        <div class="card-body-container">
+                                            <div class="card-body">
+                                                <h5 class="card-title">${thirdPart[i].project_name}</h5>
+                                                <h6 class="card-subtitle">${thirdPart[i].author}</h6>     
+                                            </div>  
+                                            <button class="modal-btn" id="modalBtn"><i class="fa-solid fa-arrow-right-long"></i></button>
+                                        </div>
+                                </div>
+            
+                                `
+                                }
+
+                            } else if (y.matches) {
+                                const twoPartIndex = Math.ceil(array.length / 2);
+
+                                const secondPart = array.splice(-twoPartIndex);
+                                const firstPart = array;
+
+                                for (let i = 0; i < firstPart.length; i++) {
+                                    document.getElementById("resultsOne").innerHTML += `
+            
+                                    <div class="card">
+                                            <img class="card-img-top" src="${firstPart[i].img_url}" alt="Project Image">
+                                            <div class="card-body-container">
+                                            <div class="card-body">
+                                                <h5 class="card-title">${firstPart[i].project_name}</h5>
+                                                <h6 class="card-subtitle">${firstPart[i].author}</h6>     
+                                            </div>              
+                                            <button class="modal-btn" id="modalBtn"><i class="fa-solid fa-arrow-right-long"></i></button>  
+                                            </div>  
+                                    </div>
+                
+                                    `
+                                }
+
+                                for (let i = 0; i < secondPart.length; i++) {
+                                    document.getElementById("resultsTwo").innerHTML += `
+            
+                                    <div class="card">
+                                            <img class="card-img-top" src="${secondPart[i].img_url}" alt="Project Image">
+                                            <div class="card-body-container">
+                                            <div class="card-body">
+                                                <h5 class="card-title">${secondPart[i].project_name}</h5>
+                                                <h6 class="card-subtitle">${secondPart[i].author}</h6>     
+                                            </div>      
+                                            <button class="modal-btn" id="modalBtn"><i class="fa-solid fa-arrow-right-long"></i></button>   
+                                            </div>                         
+                                    </div>
+                
+                                    `
+                                }
+                            } else {
+                                for (let i = 0; i < array.length; i++) {
+                                    document.getElementById("resultsOne").innerHTML += `
+            
+                                    <div class="card">
+                                            <img class="card-img-top" src="${array[i].img_url}" alt="Project Image">
+                                            <div class="card-body-container">
+                                            <div class="card-body">
+                                                <h5 class="card-title">${array[i].project_name}</h5>
+                                                <h6 class="card-subtitle">${array[i].author}</h6>     
+                                            </div>              
+                                            <button class="modal-btn" id="modalBtn"><i class="fa-solid fa-arrow-right-long"></i></button>  
+                                            </div>  
+                                    </div>
+                
+                                    `
+                                }
+                            }
+
                         }
+
+                        splitArray(desktop, tablet)
+
+
+
+
                     }
 
                     resultPage(projectsFromDB)
