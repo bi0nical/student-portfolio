@@ -52,11 +52,13 @@ $(document).ready(function() {
     
                         <div class="card">
                                 <img class="card-img-top" src="${firstPart[i].img_url}" alt="Project Image">
+                                <div class="card-body-container">
                                 <div class="card-body">
                                     <h5 class="card-title">${firstPart[i].project_name}</h5>
                                     <h6 class="card-subtitle">${firstPart[i].author}</h6>     
                                 </div>              
-                                <button class="modal-btn" id="modalBtn">Learn More.</button>    
+                                <button class="modal-btn" id="modalBtn"><i class="fa-solid fa-arrow-right-long"></i></button>  
+                                </div>  
                         </div>
     
                         `
@@ -67,11 +69,13 @@ $(document).ready(function() {
     
                         <div class="card">
                                 <img class="card-img-top" src="${secondPart[i].img_url}" alt="Project Image">
+                                <div class="card-body-container">
                                 <div class="card-body">
                                     <h5 class="card-title">${secondPart[i].project_name}</h5>
                                     <h6 class="card-subtitle">${secondPart[i].author}</h6>     
                                 </div>      
-                                <button class="modal-btn" id="modalBtn">Learn More.</button>                            
+                                <button class="modal-btn" id="modalBtn"><i class="fa-solid fa-arrow-right-long"></i></button>   
+                                </div>                         
                         </div>
     
                         `
@@ -82,19 +86,25 @@ $(document).ready(function() {
     
                         <div class="card">
                                 <img class="card-img-top" src="${thirdPart[i].img_url}" alt="Project Image">
-                                <div class="card-body">
-                                    <h5 class="card-title">${thirdPart[i].project_name}</h5>
-                                    <h6 class="card-subtitle">${thirdPart[i].author}</h6>     
-                                </div>              
-                                <button class="modal-btn" id="modalBtn">Learn More.</button>    
+                                <div class="card-body-container">
+                                    <div class="card-body">
+                                        <h5 class="card-title">${thirdPart[i].project_name}</h5>
+                                        <h6 class="card-subtitle">${thirdPart[i].author}</h6>     
+                                    </div>  
+                                    <button class="modal-btn" id="modalBtn"><i class="fa-solid fa-arrow-right-long"></i></button>
+                                </div>
                         </div>
     
                         `
                         }
                     }
 
-                    resultPage(projectsFromDB)
+                    resultPage(projectsFromDB) <<
+                        << << < HEAD
 
+                        ===
+                        === = >>>
+                        >>> > 58 db89978b1744e6409544a5451418f43e48e9b8
 
                 },
                 error: function() {
@@ -122,7 +132,12 @@ $(document).ready(function() {
         let projectUrl = $("#projectLink").val();
         console.log(projectTitle, projectDescription, imageUrl, authorName, projectUrl);
         if (projectTitle === "" || projectDescription === "" || imageUrl === "" || authorName === "" || projectUrl === "") {
-            alert("Please enter all project details before submitting");
+            $(".add-project-form").append(`
+            <div id="#newProjectWarning" class="alert alert-warning alert-dismissible fade show mt-4" role="alert">
+                <strong>Woah there!</strong> Please fill in every field above before submitting.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            `)
         } else {
             $.ajax({
                 url: `http://${url}/addProject`,
@@ -141,10 +156,21 @@ $(document).ready(function() {
                     $("#imageUrl").val("");
                     $("#authorName").val("");
                     $("#projectLink").val("");
-                    alert("Project added");
+                    $(".add-project-form").append(`
+                    <div id="#newProjectSuccess" class="alert alert-success alert-dismissible fade show mt-4" role="alert">
+                        <strong>Nice!</strong> A new project has been submitted successfully.
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    `)
                 },
                 error: function() {
                     console.log("Can't call API");
+                    $(".add-project-form").append(`
+                    <div id="#newProjectWarning" class="alert alert-warning alert-dismissible fade show mt-4" role="alert">
+                        Hmm... Can't seem to call the API right now.
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    `)
                 }
             }) // end of ajax
         } // end of if
@@ -162,7 +188,12 @@ $(document).ready(function() {
         let projectUrl = $("#newProjectLink").val();
         console.log(projectId, projectTitle, projectDescription, imageUrl, authorName, projectUrl);
         if (projectId === "") {
-            alert("Please provide a project ID for updating");
+            $(".update-project-form").append(`
+            <div id="#updateProjectWarning" class="alert alert-warning alert-dismissible fade show mt-4" role="alert">
+                <strong>Woops!</strong> Please provide a project ID to update first.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            `)
         } else {
             $.ajax({
                 url: `http://${url}/updateProject/${projectId}`,
@@ -176,10 +207,27 @@ $(document).ready(function() {
                 },
                 success: function(data) {
                     console.log(data);
-                    alert("Project has been updated");
+                    $("#projectID").val("");
+                    $("#newProjectTitle").val("");
+                    $("#newProjectDescription").val("");
+                    $("#newImageUrl").val("");
+                    $("#newAuthorName").val("");
+                    $("#newProjectLink").val("");
+                    $(".update-project-form").append(`
+                    <div id="#updateProjectSuccess" class="alert alert-success alert-dismissible fade show mt-4" role="alert">
+                        <strong>Yay!</strong> Project has been updated successfully.
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    `)
                 },
                 error: function() {
                     console.log("Cannot update project");
+                    $(".update-project-form").append(`
+                    <div id="#updateProjectWarning" class="alert alert-warning alert-dismissible fade show mt-4" role="alert">
+                        Dang! Can't update the project. Make sure you've provided an existing ID.
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    `)
                 }
             }) // end of ajax
         } // end of if
@@ -192,7 +240,12 @@ $(document).ready(function() {
         let projectId = $("#deleteProjectId").val();
         console.log(projectId);
         if (projectId === "") {
-            alert("Please provide an project ID to delete");
+            $(".delete-project-form").append(`
+            <div id="#deleteProjectWarning" class="alert alert-warning alert-dismissible fade show mt-4" role="alert">
+                <strong>Error!</strong> Please provide a project ID to delete first.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            `)
         } else {
             $.ajax({
                 url: `http://${url}/deleteProject/${projectId}`,
@@ -200,10 +253,21 @@ $(document).ready(function() {
                 success: function() {
                     console.log("Deleted project");
                     $("#deleteProjectId").val("");
-                    alert("Product successfully deleted");
+                    $(".delete-project-form").append(`
+                    <div id="#deleteProjectSuccess" class="alert alert-success alert-dismissible fade show mt-4" role="alert">
+                        <strong>Zap!</strong> Project was deleted successfully.
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    `)
                 },
                 error: function() {
                     console.log("Error! Cannot call API");
+                    $(".delete-project-form").append(`
+                    <div id="#deleteProjectWarning" class="alert alert-warning alert-dismissible fade show mt-4" role="alert">
+                        There's been a problem conencting to the API.
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    `)
                 }
             }) // end of ajax
         } // end of if
@@ -293,4 +357,4 @@ $(".update").on("click", function() {
 //     }),
 // };)     //     }),
 // };),
-// };)
+// };)/ };)

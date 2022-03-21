@@ -16,9 +16,160 @@
 </head>
 
 <body>
-    <div class="gallery-tools">
-        <div class="gallery-tools__header">
-            <div class="header-left">
+
+    <div class="results__header">
+        <div class="header-left">
+            <div class="course-info">
+                <h4 class="course-info__heading">2107-BSW-WUX</h4>
+                <p class="course-info__subheading">Web & UX Design</p>
+            </div>
+            <div class="yoobee-info">
+                <h4 class="yoobee-info__heading">YOOBEE</h4>
+                <p class="yoobee-info__subheading">College of Creative Innovation</p>
+            </div>
+        </div>
+
+        <div class="header-right">
+            <button class="header-right__btn" id="returnHomeBtn">BACK TO HOME</button>
+            <button class="header-right__btn" id="galleryToolsBtn">GALLERY TOOLS</button>
+        </div>
+    </div>
+
+
+    <div class="gallery-tools__main">
+        <div class="gallery-tools__container">
+            <div class="heading-container">
+                <div class="heading">
+                    <h1>ADD TO GALLERY</h1>
+                </div>
+                <div class="line-detail"></div>
+            </div>
+
+
+            <div class="accordion" id="galleryToolsAccordion">
+
+                <div class="accordion-container mt-5 justify-content-center">
+
+                    <!-- add project form -->
+
+                    <div class="add choice expand">
+                        <div class="add-project-form">
+                            <div class="form-group">
+                                <label for="projectTitle">Project Title:</label>
+                                <input type="text" class="form-control" id="projectTitle" placeholder="Enter your project title">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="projectDescription">Project Description:</label>
+                                <textarea type="text" class="form-control" id="projectDescription" placeholder="Enter your project description"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="imageUrl">Project Image URL:</label>
+                                <input type="text" class="form-control" id="imageUrl" placeholder="Enter your image url here">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="authorName">Author Name/s:</label>
+                                <input type="text" class="form-control" id="authorName" placeholder="Project author">
+                            </div>
+
+                            <<<<<<< HEAD <div class="form-group">
+                                <label for="projectLink">Project Link:</label>
+                                <input type="text" class="form-control" id="projectLink" placeholder="Add a link to your project!">
+                                =======
+                                <button type="submit" class="addProjectBtn">ADD TO GALLERY</button>
+
+                                >>>>>>> 04af1525b1f04909b40b384888a954d77bf6df81
+                        </div>
+
+                        <button type="submit" class="addProjectBtn">ADD TO GALLERY</button>
+                    </div>
+                </div>
+                <!-- end of add project form -->
+
+                <!-- update project form -->
+                <div class="update choice small">
+                    <div class="update-project-form">
+                        <div class="form-group">
+                            <label for="projectID">Project ID:</label>
+                            <input type="text" class="form-control" id="projectID" placeholder="Enter the ID of your project">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="newProjectTitle">Project Title:</label>
+                            <input type="text" class="form-control" id="newProjectTitle" placeholder="Enter your project title here">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="newProjectDescription">Project Description:</label>
+                            <textarea type="text" class="form-control" id="newProjectDescription" placeholder="Enter your project description"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="newImageUrl">Project Image URL:</label>
+                            <input type="text" class="form-control" id="newImageUrl" placeholder="Enter your image url here">
+                        </div>
+
+                        <<<<<<< HEAD <div class="form-group">
+                            <label for="newAuthorName">Author Name/s:</label>
+                            <input type="text" class="form-control" id="newAuthorName" placeholder="Project author">
+                    </div>
+                    =======
+                    <!-- delete project form -->
+                    <div class="delete choice small">
+                        <div class="delete-project-form">
+                            <div class="form-group">
+                                <label for="projectTitle">Project ID:</label>
+                                <input type="text" class="form-control" id="deleteProjectId" placeholder="Enter project ID here">
+                            </div>
+                            >>>>>>> 04af1525b1f04909b40b384888a954d77bf6df81
+
+                            <div class="form-group">
+                                <label for="newProjectLink">Project Link:</label>
+                                <input type="text" class="form-control" id="newProjectLink" placeholder="Add a link to your project!">
+                            </div>
+
+                            <button type="submit" class="updateProjectBtn">UPDATE PROJECT</button>
+                        </div>
+                    </div>
+                    <!-- end of update form -->
+
+                    <!-- delete project form -->
+                    <div class="delete choice small">
+                        <div class="delete-project-form">
+                            <div class="form-group">
+                                <label for="projectTitle">Project ID:</label>
+                                <input type="text" class="form-control" id="projectTitle" placeholder="Enter project ID here">
+                            </div>
+
+                            <button type="submit" class="deleteProjectBtn">DELETE PROJECT</button>
+                        </div>
+                    </div>
+                    <!-- end of delete project form -->
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="footer">
+        <div class="footer__top">
+            <div class="footer__top-left">
+                <h2>PORTFOLIO GALLERY</h2>
+                <h3>Class of July 2022</h3>
+            </div>
+            <div class="footer__top-right">
+                <a>HOME</a>
+                <a>GALLERY TOOLS</a>
+                <a>ABOUT 2107-BSW-WUX</a>
+                <a>ABOUT YOOBEE</a>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <div class="footer__bottom-left">
                 <div class="course-info">
                     <h4 class="course-info__heading">2107-BSW-WUX</h4>
                     <p class="course-info__subheading">Web & UX Design</p>
@@ -28,153 +179,15 @@
                     <p class="yoobee-info__subheading">College of Creative Innovation</p>
                 </div>
             </div>
-
-            <div class="header-right">
-                <button class="header-right__btn" id="returnHomeBtn">BACK TO HOME</button>
-                <button class="header-right__btn" id="galleryToolsBtn">GALLERY TOOLS</button>
-            </div>
+            <div class="footer__bottom-right"></div>
         </div>
 
+    </footer>
 
-        <div class="gallery-tools__main">
-            <div class="gallery-tools__container">
-                <div class="heading-container">
-                    <div class="heading">
-                        <h1>ADD TO GALLERY</h1>
-                    </div>
-                    <div class="line-detail"></div>
-                </div>
-
-
-                <div class="accordion" id="galleryToolsAccordion">
-
-                    <div class="accordion-container mt-5 justify-content-center">
-
-                        <!-- add project form -->
-
-                        <div class="add choice expand">
-                            <div class="add-project-form">
-                                <div class="form-group">
-                                    <label for="projectTitle">Project Title:</label>
-                                    <input type="text" class="form-control" id="projectTitle" placeholder="Enter your project title">
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="projectDescription">Project Description:</label>
-                                    <textarea type="text" class="form-control" id="projectDescription" placeholder="Enter your project description"></textarea>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="imageUrl">Project Image URL:</label>
-                                    <input type="text" class="form-control" id="imageUrl" placeholder="Enter your image url here">
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="authorName">Author Name/s:</label>
-                                    <input type="text" class="form-control" id="authorName" placeholder="Project author">
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="projectLink">Project Link:</label>
-                                    <input type="text" class="form-control" id="projectLink" placeholder="Add a link to your project!">
-                                </div>
-
-                                <button type="submit" class="addProjectBtn">ADD TO GALLERY</button>
-                            </div>
-                        </div>
-                        <!-- end of add project form -->
-
-                        <!-- update project form -->
-                        <div class="update choice small">
-                            <div class="update-project-form">
-                                <div class="form-group">
-                                    <label for="projectID">Project ID:</label>
-                                    <input type="text" class="form-control" id="projectID" placeholder="Enter the ID of your project">
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="newProjectTitle">Project Title:</label>
-                                    <input type="text" class="form-control" id="newProjectTitle" placeholder="Enter your project title here">
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="newProjectDescription">Project Description:</label>
-                                    <textarea type="text" class="form-control" id="newProjectDescription" placeholder="Enter your project description"></textarea>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="newImageUrl">Project Image URL:</label>
-                                    <input type="text" class="form-control" id="newImageUrl" placeholder="Enter your image url here">
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="newAuthorName">Author Name/s:</label>
-                                    <input type="text" class="form-control" id="newAuthorName" placeholder="Project author">
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="newProjectLink">Project Link:</label>
-                                    <input type="text" class="form-control" id="newProjectLink" placeholder="Add a link to your project!">
-                                </div>
-
-                                <button type="submit" class="updateProjectBtn">UPDATE PROJECT</button>
-                            </div>
-                        </div>
-                        <!-- end of update form -->
-
-                        <!-- delete project form -->
-                        <div class="delete choice small">
-                            <div class="delete-project-form">
-                                <div class="form-group">
-                                    <label for="projectTitle">Project ID:</label>
-                                    <input type="text" class="form-control" id="projectTitle" placeholder="Enter project ID here">
-                                </div>
-
-                                <button type="submit" class="deleteProjectBtn">DELETE PROJECT</button>
-                            </div>
-                        </div>
-                        <!-- end of delete project form -->
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-
-        <footer class="footer">
-            <div class="footer__top">
-                <div class="footer__top-left">
-                    <h2>PORTFOLIO GALLERY</h2>
-                    <h3>Class of July 2022</h3>
-                </div>
-                <div class="footer__top-right">
-                    <a>HOME</a>
-                    <a>GALLERY TOOLS</a>
-                    <a>ABOUT 2107-BSW-WUX</a>
-                    <a>ABOUT YOOBEE</a>
-                </div>
-            </div>
-
-            <div class="footer__bottom">
-                <div class="footer__bottom-left">
-                    <div class="course-info">
-                        <h4 class="course-info__heading">2107-BSW-WUX</h4>
-                        <p class="course-info__subheading">Web & UX Design</p>
-                    </div>
-                    <div class="yoobee-info">
-                        <h4 class="yoobee-info__heading">YOOBEE</h4>
-                        <p class="yoobee-info__subheading">College of Creative Innovation</p>
-                    </div>
-                </div>
-                <div class="footer__bottom-right"></div>
-            </div>
-
-        </footer>
-
-        <script src="https://kit.fontawesome.com/c64c3c1a97.js" crossorigin="anonymous"></script>
-        <script src="./node_modules/jquery/dist/jquery.min.js"></script>
-        <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="./js/index.js"></script>
+    <script src="https://kit.fontawesome.com/c64c3c1a97.js" crossorigin="anonymous"></script>
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 
 </html>
