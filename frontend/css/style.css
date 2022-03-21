@@ -9,6 +9,19 @@
   font-family: "Clara Antiqua";
   src: url("../fonts/ClaraAntiqua.otf");
 }
+.results {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.results-one, .results-two, .results-three {
+  background: blue;
+  height: 100vh;
+  width: 100%;
+}
+
 /* screen - modal */
 .screen * {
   -webkit-font-smoothing: antialiased;
