@@ -1,6 +1,5 @@
 console.log("Frontend Javascript is linked!");
 
-
 // ==============================================
 // Start of database tools
 // ==============================================
@@ -21,6 +20,97 @@ $(document).ready(function() {
             console.log(error);
         }
     })
+
+    // display products
+    $("#viewProjects").click(function(){
+        console.log("clicked")
+
+        $.ajax({
+          url: `http://${url}/allProjects`,
+          type: "GET",
+          dataType: "json",
+          success: function(projectsFromDB){
+              console.log(projectsFromDB);
+                document.getElementById("resultsOne").innerHTML = "";
+                document.getElementById("resultsTwo").innerHTML = "";
+                document.getElementById("resultsThree").innerHTML = "";
+
+                function resultPage(array){
+
+                    // randomise order
+                    for (let h = array.length - 1; h > 0; h--) {
+                        const j = Math.floor(Math.random() * (h + 1));
+                        [array[h], array[j]] = [array[j], array[h]];
+                    }
+
+                    console.log(array);
+                    // end of randomise order
+
+                    // split array 
+                    const threePartIndex = Math.ceil(array.length / 3);
+
+                    const thirdPart = array.splice(-threePartIndex);
+                    const secondPart = array.splice(-threePartIndex);
+                    const firstPart = array;   
+                    // end of split array
+                    
+                    for(let i=0; i<firstPart.length; i++){
+                        document.getElementById("resultsOne").innerHTML += `
+    
+                        <div class="card" style="width: 18rem;">
+                                <img class="card-img-top" src="${firstPart[i].img_url}" alt="Project Image">
+                                <div class="card-body">
+                                    <h5 class="card-title">${firstPart[i].project_name}</h5>
+                                    <h6 class="card-subtitle">${firstPart[i].author}</h6>     
+                                </div>              
+                            </div>
+                        </div>
+    
+                        `
+                    }
+
+                    for(let i=0; i<secondPart.length; i++){
+                        document.getElementById("resultsTwo").innerHTML += `
+    
+                        <div class="card" style="width: 18rem;">
+                                <img class="card-img-top" src="${secondPart[i].img_url}" alt="Project Image">
+                                <div class="card-body">
+                                    <h5 class="card-title">${secondPart[i].project_name}</h5>
+                                    <h6 class="card-subtitle">${secondPart[i].author}</h6>     
+                                </div>              
+                            </div>
+                        </div>
+    
+                        `
+                    }
+
+                    for(let i=0; i<thirdPart.length; i++){
+                        document.getElementById("resultsThree").innerHTML += `
+    
+                        <div class="card" style="width: 18rem;">
+                                <img class="card-img-top" src="${thirdPart[i].img_url}" alt="Project Image">
+                                <div class="card-body">
+                                    <h5 class="card-title">${thirdPart[i].project_name}</h5>
+                                    <h6 class="card-subtitle">${thirdPart[i].author}</h6>     
+                                </div>              
+                            </div>
+                        </div>
+    
+                        `
+                    }
+                }
+
+                resultPage(projectsFromDB)
+                
+                
+            },
+            error: function(){
+                alert("unable to get projects")
+            }
+        })
+    })
+    // end of display projects
+
 
     // Add a new project
     $(".addProjectBtn").click(function() {

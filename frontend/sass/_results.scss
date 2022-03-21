@@ -1,0 +1,13 @@
+.results{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &-one, &-two, &-three{
+        width: 30%;
+        height: 250rem;
+        background-color: blue ;
+    }
+}
