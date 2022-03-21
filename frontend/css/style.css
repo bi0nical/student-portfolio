@@ -86,7 +86,7 @@
 }
 .results .heading-container .heading h1 {
   font-family: "Clara Antiqua", sans-serif;
-  font-size: 4.5rem;
+  font-size: 5vw;
 }
 .results .heading-container .heading h3 {
   font-family: "Montserrat", sans-serif;
@@ -132,17 +132,17 @@
   color: #313490;
 }
 .results-one {
-  padding-right: 1vw;
+  padding-right: 1.5vw;
   grid-column: 1/2;
   grid-row: 5/8;
 }
 .results-two {
-  padding: 0 1vw;
+  padding: 0 1.5vw;
   grid-column: 2/3;
   grid-row: 4/8;
 }
 .results-three {
-  padding-left: 1vw;
+  padding-left: 1.5vw;
   grid-column: 3/4;
   grid-row: 2/8;
 }
@@ -550,7 +550,7 @@
 }
 .gallery-tools__main .gallery-tools__container .heading-container .heading h1 {
   font-family: "Clara Antiqua", sans-serif;
-  font-size: 4.5rem;
+  font-size: 5vw;
 }
 .gallery-tools__main .gallery-tools__container .heading-container .line-detail {
   width: 100%;
@@ -619,7 +619,7 @@
 }
 .footer__top-left h2 {
   font-family: "Clara Antiqua", sans-serif;
-  font-size: 4.5rem;
+  font-size: 5vw;
   font-size: 3rem;
 }
 .footer__top-left h3 {
