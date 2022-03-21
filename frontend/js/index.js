@@ -63,7 +63,7 @@ $(document).ready(function() {
                                     <h5 class="card-title">${firstPart[i].project_name}</h5>
                                     <h6 class="card-subtitle">${firstPart[i].author}</h6>     
                                 </div>              
-                            </div>
+                                <button class="modal-btn" id="modalBtn">Learn More.</button>    
                         </div>
     
                         `
@@ -78,7 +78,7 @@ $(document).ready(function() {
                                     <h5 class="card-title">${secondPart[i].project_name}</h5>
                                     <h6 class="card-subtitle">${secondPart[i].author}</h6>     
                                 </div>      
-                                <button class="modal-btn" id="modalBtn"></button>                            </div>
+                                <button class="modal-btn" id="modalBtn">Learn More.</button>                            
                         </div>
     
                         `
@@ -93,7 +93,7 @@ $(document).ready(function() {
                                     <h5 class="card-title">${thirdPart[i].project_name}</h5>
                                     <h6 class="card-subtitle">${thirdPart[i].author}</h6>     
                                 </div>              
-                            </div>
+                                <button class="modal-btn" id="modalBtn">Learn More.</button>    
                         </div>
     
                         `
