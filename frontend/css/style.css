@@ -114,6 +114,20 @@ footer {
   display: inline-block;
 }
 
+.footer-rightM {
+  align-items: right;
+  justify-content: right;
+  float: right;
+  text-align: right;
+  padding-right: 6rem;
+  line-height: 1.8rem;
+  transform: translateY(-120%);
+}
+
+.line-imageM {
+  transform: translateX(43%);
+}
+
 body {
   font-family: "Montserrat";
   background-color: white;
