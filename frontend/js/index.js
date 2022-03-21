@@ -15,15 +15,8 @@ $(document).ready(function() {
         success: function(configData) {
             url = `${configData.SERVER_URL}:${configData.SERVER_PORT}`;
             console.log(url);
-        },
-        error: function(error) {
-            console.log(error);
-        }
-    })
 
-    // display products
-    $("#viewProjects").click(function() {
-        console.log("clicked")
+                // display products
 
         $.ajax({
             url: `http://${url}/allProjects`,
@@ -108,8 +101,15 @@ $(document).ready(function() {
                 alert("unable to get projects")
             }
         })
-    })
+  
     // end of display projects
+        },
+        error: function(error) {
+            console.log(error);
+        }
+    })
+
+
 
 
     // Add a new project
