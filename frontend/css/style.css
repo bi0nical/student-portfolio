@@ -405,7 +405,6 @@
   padding: 0;
 }
 .gallery-tools__main .accordion-container .choice {
-  height: 30rem;
   box-sizing: border-box;
   padding: 1rem;
   overflow: hidden;
@@ -419,6 +418,7 @@
 }
 .gallery-tools__main .accordion-container .small {
   width: 10rem;
+  max-height: auto;
   margin: 0 1rem;
   background-color: #313490 !important;
 }
