@@ -69,7 +69,24 @@
   padding-bottom: 5rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto auto 1.5rem 3rem auto 10rem auto;
+  grid-template-rows: auto 8vw 1.5rem 3rem auto 10rem auto;
+}
+@media (min-width: 601px) and (max-width: 1023px) {
+  .results {
+    height: fit-content;
+    padding: 0rem 5rem;
+    padding-bottom: 5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 28vw 1.5rem 3rem auto 10rem auto;
+  }
+}
+@media (max-width: 600px) {
+  .results {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1.5rem 3rem auto 10rem auto;
+  }
 }
 .results .heading-container {
   width: 100%;
@@ -102,13 +119,30 @@
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
+@media (min-width: 601px) and (max-width: 1023px) {
+  .results .heading-container {
+    width: 100%;
+    display: flex;
+    padding-bottom: 2rem;
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+}
 .results .blurb {
   grid-column: 1/3;
   grid-row: 2/3;
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
-  font-size: 0.8w;
+  font-size: 1vw;
   padding-right: 5rem;
+  height: fit-content;
+}
+@media (min-width: 601px) and (max-width: 1023px) {
+  .results .blurb {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    font-size: 1.5vw;
+  }
 }
 .results .go-to-gallery {
   grid-column: 1/2;
@@ -125,7 +159,7 @@
   padding-bottom: 1rem;
 }
 .results .go-to-gallery .go-to-gallery-btn {
-  background-color: none;
+  background: none;
   border: none;
   font-size: 1.2vw;
   line-height: 1vw;
@@ -139,12 +173,33 @@
 .results-two {
   padding: 0 1.5vw;
   grid-column: 2/3;
-  grid-row: 4/8;
+  grid-row: 3/8;
+}
+@media (min-width: 601px) and (max-width: 1023px) {
+  .results-two {
+    grid-column: 2/3;
+    grid-row: 2/8;
+  }
+}
+@media (max-width: 600px) {
+  .results-two {
+    display: none;
+  }
 }
 .results-three {
   padding-left: 1.5vw;
   grid-column: 3/4;
   grid-row: 2/8;
+}
+@media (min-width: 601px) and (max-width: 1023px) {
+  .results-three {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .results-three {
+    display: none;
+  }
 }
 .results .card {
   margin-bottom: 2vw;
