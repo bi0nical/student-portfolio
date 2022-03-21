@@ -16,39 +16,39 @@ $(document).ready(function() {
             url = `${configData.SERVER_URL}:${configData.SERVER_PORT}`;
             console.log(url);
 
-                // display products
+            // display products
 
-        $.ajax({
-            url: `http://${url}/allProjects`,
-            type: "GET",
-            dataType: "json",
-            success: function(projectsFromDB) {
-                console.log(projectsFromDB);
-                document.getElementById("resultsOne").innerHTML = "";
-                document.getElementById("resultsTwo").innerHTML = "";
-                document.getElementById("resultsThree").innerHTML = "";
+            $.ajax({
+                url: `http://${url}/allProjects`,
+                type: "GET",
+                dataType: "json",
+                success: function(projectsFromDB) {
+                    console.log(projectsFromDB);
+                    document.getElementById("resultsOne").innerHTML = "";
+                    document.getElementById("resultsTwo").innerHTML = "";
+                    document.getElementById("resultsThree").innerHTML = "";
 
-                function resultPage(array) {
+                    function resultPage(array) {
 
-                    // randomise order
-                    for (let h = array.length - 1; h > 0; h--) {
-                        const j = Math.floor(Math.random() * (h + 1));
-                        [array[h], array[j]] = [array[j], array[h]];
-                    }
+                        // randomise order
+                        for (let h = array.length - 1; h > 0; h--) {
+                            const j = Math.floor(Math.random() * (h + 1));
+                            [array[h], array[j]] = [array[j], array[h]];
+                        }
 
-                    console.log(array);
-                    // end of randomise order
+                        console.log(array);
+                        // end of randomise order
 
-                    // split array 
-                    const threePartIndex = Math.ceil(array.length / 3);
+                        // split array 
+                        const threePartIndex = Math.ceil(array.length / 3);
 
-                    const thirdPart = array.splice(-threePartIndex);
-                    const secondPart = array.splice(-threePartIndex);
-                    const firstPart = array;
-                    // end of split array
+                        const thirdPart = array.splice(-threePartIndex);
+                        const secondPart = array.splice(-threePartIndex);
+                        const firstPart = array;
+                        // end of split array
 
-                    for (let i = 0; i < firstPart.length; i++) {
-                        document.getElementById("resultsOne").innerHTML += `
+                        for (let i = 0; i < firstPart.length; i++) {
+                            document.getElementById("resultsOne").innerHTML += `
     
                         <div class="card">
                                 <img class="card-img-top" src="${firstPart[i].img_url}" alt="Project Image">
@@ -60,10 +60,10 @@ $(document).ready(function() {
                         </div>
     
                         `
-                    }
+                        }
 
-                    for (let i = 0; i < secondPart.length; i++) {
-                        document.getElementById("resultsTwo").innerHTML += `
+                        for (let i = 0; i < secondPart.length; i++) {
+                            document.getElementById("resultsTwo").innerHTML += `
     
                         <div class="card">
                                 <img class="card-img-top" src="${secondPart[i].img_url}" alt="Project Image">
@@ -75,10 +75,10 @@ $(document).ready(function() {
                         </div>
     
                         `
-                    }
+                        }
 
-                    for (let i = 0; i < thirdPart.length; i++) {
-                        document.getElementById("resultsThree").innerHTML += `
+                        for (let i = 0; i < thirdPart.length; i++) {
+                            document.getElementById("resultsThree").innerHTML += `
     
                         <div class="card">
                                 <img class="card-img-top" src="${thirdPart[i].img_url}" alt="Project Image">
@@ -90,19 +90,19 @@ $(document).ready(function() {
                         </div>
     
                         `
+                        }
                     }
+
+                    resultPage(projectsFromDB)
+
+
+                },
+                error: function() {
+                    alert("unable to get projects")
                 }
+            })
 
-                resultPage(projectsFromDB)
-
-
-            },
-            error: function() {
-                alert("unable to get projects")
-            }
-        })
-  
-    // end of display projects
+            // end of display projects
         },
         error: function(error) {
             console.log(error);
