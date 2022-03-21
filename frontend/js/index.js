@@ -99,12 +99,7 @@ $(document).ready(function() {
                         }
                     }
 
-                    resultPage(projectsFromDB) <<
-                        << << < HEAD
-
-                        ===
-                        === = >>>
-                        >>> > 58 db89978b1744e6409544a5451418f43e48e9b8
+                    resultPage(projectsFromDB)
 
                 },
                 error: function() {
