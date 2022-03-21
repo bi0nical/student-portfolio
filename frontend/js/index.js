@@ -52,11 +52,13 @@ $(document).ready(function() {
     
                         <div class="card">
                                 <img class="card-img-top" src="${firstPart[i].img_url}" alt="Project Image">
+                                <div class="card-body-container">
                                 <div class="card-body">
                                     <h5 class="card-title">${firstPart[i].project_name}</h5>
                                     <h6 class="card-subtitle">${firstPart[i].author}</h6>     
                                 </div>              
-                                <button class="modal-btn" id="modalBtn">Learn More.</button>    
+                                <button class="modal-btn" id="modalBtn"><i class="fa-solid fa-arrow-right-long"></i></button>  
+                                </div>  
                         </div>
     
                         `
@@ -67,11 +69,13 @@ $(document).ready(function() {
     
                         <div class="card">
                                 <img class="card-img-top" src="${secondPart[i].img_url}" alt="Project Image">
+                                <div class="card-body-container">
                                 <div class="card-body">
                                     <h5 class="card-title">${secondPart[i].project_name}</h5>
                                     <h6 class="card-subtitle">${secondPart[i].author}</h6>     
                                 </div>      
-                                <button class="modal-btn" id="modalBtn">Learn More.</button>                            
+                                <button class="modal-btn" id="modalBtn"><i class="fa-solid fa-arrow-right-long"></i></button>   
+                                </div>                         
                         </div>
     
                         `
@@ -82,11 +86,13 @@ $(document).ready(function() {
     
                         <div class="card">
                                 <img class="card-img-top" src="${thirdPart[i].img_url}" alt="Project Image">
-                                <div class="card-body">
-                                    <h5 class="card-title">${thirdPart[i].project_name}</h5>
-                                    <h6 class="card-subtitle">${thirdPart[i].author}</h6>     
-                                </div>              
-                                <button class="modal-btn" id="modalBtn">Learn More.</button>    
+                                <div class="card-body-container">
+                                    <div class="card-body">
+                                        <h5 class="card-title">${thirdPart[i].project_name}</h5>
+                                        <h6 class="card-subtitle">${thirdPart[i].author}</h6>     
+                                    </div>  
+                                    <button class="modal-btn" id="modalBtn"><i class="fa-solid fa-arrow-right-long"></i></button>
+                                </div>
                         </div>
     
                         `
@@ -94,7 +100,6 @@ $(document).ready(function() {
                     }
 
                     resultPage(projectsFromDB)
-
 
                 },
                 error: function() {
@@ -347,4 +352,4 @@ $(".update").on("click", function() {
 //     }),
 // };)     //     }),
 // };),
-// };)
+// };)/ };)
