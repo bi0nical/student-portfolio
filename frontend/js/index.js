@@ -22,20 +22,20 @@ $(document).ready(function() {
     })
 
     // display products
-    $("#viewProjects").click(function(){
+    $("#viewProjects").click(function() {
         console.log("clicked")
 
         $.ajax({
-          url: `http://${url}/allProjects`,
-          type: "GET",
-          dataType: "json",
-          success: function(projectsFromDB){
-              console.log(projectsFromDB);
+            url: `http://${url}/allProjects`,
+            type: "GET",
+            dataType: "json",
+            success: function(projectsFromDB) {
+                console.log(projectsFromDB);
                 document.getElementById("resultsOne").innerHTML = "";
                 document.getElementById("resultsTwo").innerHTML = "";
                 document.getElementById("resultsThree").innerHTML = "";
 
-                function resultPage(array){
+                function resultPage(array) {
 
                     // randomise order
                     for (let h = array.length - 1; h > 0; h--) {
@@ -51,13 +51,13 @@ $(document).ready(function() {
 
                     const thirdPart = array.splice(-threePartIndex);
                     const secondPart = array.splice(-threePartIndex);
-                    const firstPart = array;   
+                    const firstPart = array;
                     // end of split array
-                    
-                    for(let i=0; i<firstPart.length; i++){
+
+                    for (let i = 0; i < firstPart.length; i++) {
                         document.getElementById("resultsOne").innerHTML += `
     
-                        <div class="card" style="width: 18rem;">
+                        <div class="card">
                                 <img class="card-img-top" src="${firstPart[i].img_url}" alt="Project Image">
                                 <div class="card-body">
                                     <h5 class="card-title">${firstPart[i].project_name}</h5>
@@ -69,25 +69,25 @@ $(document).ready(function() {
                         `
                     }
 
-                    for(let i=0; i<secondPart.length; i++){
+                    for (let i = 0; i < secondPart.length; i++) {
                         document.getElementById("resultsTwo").innerHTML += `
     
-                        <div class="card" style="width: 18rem;">
+                        <div class="card">
                                 <img class="card-img-top" src="${secondPart[i].img_url}" alt="Project Image">
                                 <div class="card-body">
                                     <h5 class="card-title">${secondPart[i].project_name}</h5>
                                     <h6 class="card-subtitle">${secondPart[i].author}</h6>     
-                                </div>              
-                            </div>
+                                </div>      
+                                <button class="modal-btn" id="modalBtn"></button>                            </div>
                         </div>
     
                         `
                     }
 
-                    for(let i=0; i<thirdPart.length; i++){
+                    for (let i = 0; i < thirdPart.length; i++) {
                         document.getElementById("resultsThree").innerHTML += `
     
-                        <div class="card" style="width: 18rem;">
+                        <div class="card">
                                 <img class="card-img-top" src="${thirdPart[i].img_url}" alt="Project Image">
                                 <div class="card-body">
                                     <h5 class="card-title">${thirdPart[i].project_name}</h5>
@@ -101,10 +101,10 @@ $(document).ready(function() {
                 }
 
                 resultPage(projectsFromDB)
-                
-                
+
+
             },
-            error: function(){
+            error: function() {
                 alert("unable to get projects")
             }
         })
@@ -292,4 +292,5 @@ $(".update").on("click", function() {
 //         }
 //     }),
 // };)     //     }),
+// };),
 // };)

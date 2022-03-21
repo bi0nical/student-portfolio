@@ -5,9 +5,10 @@
     flex-direction: row;
     justify-content: space-between;
 
-    &-one, &-two, &-three{
-        width: 30%;
-        height: 250rem;
-        background-color: blue ;
+    &-one, &-two, &-three {
+        background: blue;
+        height: 100vh;
+        width: 100%;
+
     }
 }
