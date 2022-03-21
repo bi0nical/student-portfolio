@@ -1,14 +1,219 @@
-.results{
+.results__header{
     width: 100%;
-    height: 100vh;
+    padding: 3rem 5rem;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 5rem;
+    margin: 0;
 
-    &-one, &-two, &-three {
-        background: blue;
-        height: 100vh;
-        width: 100%;
+    .header-left{
 
+        display: flex;
+        height: fit-content;
+
+        .course-info, .yoobee-info{
+
+            margin-right: 3rem;
+
+            &__heading{
+                font-family: $content-font;
+                font-weight: $content-heading-weight;
+                font-size: 1rem;
+                line-height: 1.2rem;
+            }
+
+            &__subheading{
+                font-family: $content-font;
+                font-weight: $body-font-weight;
+                font-size: .8rem;
+                line-height: .8rem;
+                color: $purple;
+                margin: 0;
+            }
+        }
     }
+
+    .header-right{
+
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+
+
+        &__btn{
+            padding: .75rem 1rem;
+            min-height: 100%;
+            margin-left: 1.5rem;
+            background: none;
+            border: solid 3px $purple;
+            font-family: $content-font;
+            font-weight: $body-font-weight;
+            font-size: .8rem;
+            line-height: .8rem;
+
+            &:hover{
+                background-color: $purple;
+                color: white;
+            }
+        }
+    }
+}
+
+
+.results{
+    height: fit-content;
+    padding: 0rem 5rem;
+    padding-bottom: 5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto 3rem 3rem auto 10rem auto;
+
+    .heading-container{
+        width: 100%;
+        display: flex;
+        padding-bottom: 2rem;
+        grid-column: 1 / 4;
+        grid-row: 1/ 2;
+
+        .heading{
+            width: fit-content;
+            float: left;
+            white-space: nowrap;
+            padding-right: 2rem;
+
+            h1{
+                @include page-heading;
+                // flex-wrap: nowrap;
+            }
+
+            h3{
+                font-family: $content-font;
+                color: $purple;
+                font-weight: $content-heading-weight;
+                font-size: 1.4vw;
+            }
+
+        }
+        
+
+        .line-detail{
+            width: 100%;
+            float: right;
+            border-top: 2px solid $purple;
+            border-right: 2px solid $purple;
+            margin-top: .5rem;
+            margin-bottom: .5rem;
+        }
+    }
+
+        .blurb{
+            grid-column: 1 / 3;
+            grid-row: 2/ 3;
+
+            font-family: $content-font;
+            font-weight: $body-font-weight;
+            font-size: .8w;
+            padding-right: 5rem;
+        }
+
+        .go-to-gallery{
+            grid-column: 1 / 2;
+            grid-row: 3/ 4;
+            display: flex;
+            align-items: flex-start;
+             
+            h6{
+                font-family: $content-font;
+                font-weight: $content-heading-weight;
+                font-size: 1vw;
+                line-height: 1.2vw;
+                padding-right: 1rem;
+                padding-bottom: 1rem;
+                
+            }
+
+            .go-to-gallery-btn{
+                background-color: none;
+                border: none;
+                font-size: 1.2vw;
+                line-height: 1vw;
+                color: $purple;
+            }
+            
+            
+
+        }
+
+        &-one{
+            padding-right: 1vw;
+            grid-column: 1 / 2;
+            grid-row: 5/8
+        }
+    
+        &-two{
+            padding: 0 1vw;
+            grid-column: 2 / 3;
+            grid-row: 4 / 8
+        }
+    
+        &-three{
+            padding-left: 1vw;
+            grid-column: 3 / 4;
+            grid-row: 2 / 8
+        }
+    
+        .card{
+            margin-bottom: 2vw;    
+            border: none;
+            border-radius: 0;
+            // box-shadow: 5px 5px 40px lightgray;
+    
+            &-body-container{
+                display: flex;
+                width: 100%;
+    
+                .card-body{
+                   
+                    padding: 1rem 0;
+                    width: 80%;
+              
+                }
+            }
+    
+         
+            &-title{
+                font-family: $content-font;
+                font-weight: $content-heading-weight;
+                font-size: 1.4vw;
+            }
+    
+            &-subtitle{
+                font-family: $content-font;
+                font-weight: $body-font-weight;
+                font-size: 1vw;
+            }
+    
+        
+            .modal-btn{ 
+                background: none;
+                display: flex;
+                align-items: flex-start;
+                padding: 1rem 0;
+                border:none;
+                
+                .fa-arrow-right-long{
+                    width: fit-content;
+                    font-size: 1.6vw;
+                    color: $purple;
+    
+                }
+            }
+           
+           
+        }
+    
 }
