@@ -1,0 +1,345 @@
+.info-container{
+    width: 90vw;
+    margin: 1rem;
+
+    h1{
+        @include page-heading;
+    }
+
+    p{
+        font-family: $content-font;
+    }
+
+    .info-body{
+        display: flex;
+    }
+
+    .info-left{
+        width: 50%;
+    }
+
+    .info-right{
+        max-height: 30rem;
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+        object-fit: cover;
+        overflow-x: hidden;
+    }
+
+    .info-img{
+        height: 100%;
+    }
+}
+
+.modal-dialog-scrollable{
+    max-width: 92.5vw;
+}
+
+.modal-dialog,
+.modal-content {
+    /* 80% of window height */
+    height: 91%;
+}
+
+.modal-body {
+    /* 100% = dialog height, 120px = header + footer */
+    max-height: 100%;
+    overflow-y: scroll;
+}
+
+// /* screen - modal */
+// .screen * {
+//   -webkit-font-smoothing: antialiased;
+//   box-sizing: border-box;
+// }
+
+// .screen div {
+//   -webkit-text-size-adjust: none;
+// }
+
+// .screen a {
+//   display: contents;
+//   text-decoration: none;
+// }
+
+// .container-center-horizontal {
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: center;
+//   pointer-events: none;
+//   width: 100%;
+// }
+
+// .container-center-horizontal > * {
+//   flex-shrink: 0;
+//   pointer-events: auto;
+// }
+
+// .valign-text-middle {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+// }
+
+
+// .modal {
+//   background-color: var(--white);
+//   height: 1271px;
+//   mix-blend-mode: normal;
+//   overflow: hidden;
+//   overflow-x: hidden;
+//   position: relative;
+//   width: 1440px;
+//   display: flex;
+// }
+
+// .modal .container-modal {
+//   height: 393px;
+//   left: 737px;
+//   position: absolute;
+//   top: 369px;
+//   width: 603px;
+// }
+
+
+// .modal .aboutStudent{
+//   height: 255px;
+//   left: 90px;
+//   position: absolute;
+//   top: 370px;
+//   width: 599px;
+// }
+
+// .modal .lorem-ipsum{
+//   background-color: transparent;
+//   color: #03030a;
+//   font-family: var(--font-family-montserrat);
+//   font-size: var(--font-size-m);
+//   font-style: normal;
+//   font-weight: 300;
+//   height: auto;
+//   left: 0px;
+//   letter-spacing: 0.00px;
+//   line-height: 26.0px;
+//   mix-blend-mode: normal;
+//   position: absolute;
+//   text-align: left;
+//   top: 0px;
+//   width: 597px;
+// }
+
+// .modal .mockup{
+//   height: 393px;
+//   left: 737px;
+//   mix-blend-mode: normal;
+//   position: absolute;
+//   top: 370px;
+//   width: 603px;
+// }
+
+// .modal .plant-me{
+//   height: 53px;
+//   left: 91px;
+//   mix-blend-mode: normal;
+//   object-fit: cover;
+//   position: absolute;
+//   top: 216px;
+//   width: 371px;
+// }
+
+// .modal .justine-derrick{
+//   background-color: transparent;
+//   color: #03030a;
+//   font-family: var(--font-family-montserrat);
+//   font-size: var(--font-size-l);
+//   font-style: normal;
+//   font-weight: 700;
+//   height: 22px;
+//   left: 91px;
+//   letter-spacing: 0.00px;
+//   line-height: normal;
+//   mix-blend-mode: normal;
+//   position: absolute;
+//   text-align: left;
+//   top: 718px;
+//   width: auto;
+// }
+
+// .modal .footerContainer{
+//   height: 274px;
+//   left: 0px;
+//   position: absolute;
+//   top: 997px;
+//   width: 1440px;
+// }
+
+// .modal .footerBackground{
+//   background-color: #313490;
+//   height: 274px;
+//   left: 0px;
+//   mix-blend-mode: normal;
+//   position: absolute;
+//   top: 0px;
+//   width: 1440px;
+// }
+
+// .modal .footerContent{
+//   height: 28px;
+//   left: 92px;
+//   position: absolute;
+//   top: 158px;
+//   width: 100px;
+// }
+
+// .modal .yearDate {
+//   height: 13px;
+//   left: 0px;
+//   letter-spacing: 0.00px;
+//   line-height: normal;
+//   mix-blend-mode: normal;
+//   position: absolute;
+//   text-align: center;
+//   top: 0px;
+//   width: auto;
+// }
+
+// .modal .web-ux-design {
+//   height: 13px;
+//   left: 0px;
+//   letter-spacing: 0.00px;
+//   line-height: normal;
+//   mix-blend-mode: normal;
+//   position: absolute;
+//   text-align: center;
+//   top: 15px;
+//   width: auto;
+// }
+
+// .modal .subContent{
+//   height: 28px;
+//   left: 92px;
+//   position: absolute;
+//   top: 196px;
+//   width: 167px;
+// }
+
+// .modal .yoobee{
+//   height: 13px;
+//   left: 0px;
+//   letter-spacing: 0.00px;
+//   line-height: normal;
+//   mix-blend-mode: normal;
+//   position: absolute;
+//   text-align: center;
+//   top: 0px;
+//   width: auto;
+// }
+
+// .modal .college-of-creative-innovation{
+//   height: 13px;
+//   left: 0px;
+//   letter-spacing: 0.00px;
+//   line-height: normal;
+//   mix-blend-mode: normal;
+//   position: absolute;
+//   text-align: center;
+//   top: 15px;
+//   width: auto;
+// }
+
+// .modal .nav{
+//   height: 82px;
+//   left: 1231px;
+//   position: absolute;
+//   top: 50px;
+//   width: 116px;
+// }
+
+// .modal .home{
+//   height: 13px;
+//   left: 71px;
+//   letter-spacing: 0.00px;
+//   line-height: normal;
+//   mix-blend-mode: normal;
+//   position: absolute;
+//   text-align: center;
+//   top: 0px;
+//   width: auto;
+// }
+
+// .modal .about-our-class{
+//   height: 13px;
+//   left: 0px;
+//   letter-spacing: 0.00px;
+//   line-height: normal;
+//   mix-blend-mode: normal;
+//   position: absolute;
+//   text-align: center;
+//   top: 23px;
+//   width: auto;
+// }
+
+// .modal .add-a-project{
+//   height: 13px;
+//   left: 17px;
+//   letter-spacing: 0.00px;
+//   line-height: normal;
+//   mix-blend-mode: normal;
+//   position: absolute;
+//   text-align: center;
+//   top: 46px;
+//   width: auto;
+// }
+
+// .modal .contact-yoobee{
+//   height: 13px;
+//   left: 3px;
+//   letter-spacing: 0.00px;
+//   line-height: normal;
+//   mix-blend-mode: normal;
+//   position: absolute;
+//   text-align: center;
+//   top: 69px;
+//   width: auto;
+// }
+
+// .modal .line02{
+//   height: 42px;
+//   left: 305px;
+//   position: absolute;
+//   top: 181px;
+//   width: 1034px;
+// }
+
+// .modal .class-of-july-22 {
+//   height: 14px;
+//   left: 93px;
+//   mix-blend-mode: normal;
+//   position: absolute;
+//   top: 94px;
+//   width: 108px;
+// }
+
+// .modal .logo-footer{
+//   height: 29px;
+//   left: 93px;
+//   position: absolute;
+//   top: 50px;
+//   width: 400px;
+// }
+
+// .modal .logoFooter{
+//   height: 29px;
+//   left: -0px;
+//   mix-blend-mode: normal;
+//   object-fit: cover;
+//   position: absolute;
+//   top: -0px;
+//   width: 400px;
+// }
+// .screen textarea:focus,
+// .screen input:focus {
+//   outline: none;
+// }
+

@@ -6,6 +6,7 @@ console.log("Frontend Javascript is linked!");
 
 $(document).ready(function() {
 
+
     // Get Mongo config info
     let url;
     $.ajax({
@@ -64,8 +65,8 @@ $(document).ready(function() {
                                             <h5 class="card-title">${firstPart[i].project_name}</h5>
                                             <h6 class="card-subtitle">${firstPart[i].author}</h6>     
                                         </div>              
-                                        <button class="modal-btn" id="modalBtn"><i class="fa-solid fa-arrow-right-long"></i></button>  
-                                        </div>  
+                                        <button type="button" class="btn modal-btn" value="${firstPart[i]._id}" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-arrow-right-long"></i></button>  
+                                        </div>
                                 </div>
             
                                 `
@@ -81,7 +82,7 @@ $(document).ready(function() {
                                             <h5 class="card-title">${secondPart[i].project_name}</h5>
                                             <h6 class="card-subtitle">${secondPart[i].author}</h6>     
                                         </div>      
-                                        <button class="modal-btn" id="modalBtn"><i class="fa-solid fa-arrow-right-long"></i></button>   
+                                        <button type="button" class="btn modal-btn" value="${secondPart[i]._id}" id="modalBtn" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-arrow-right-long"></i></button>   
                                         </div>                         
                                 </div>
             
@@ -98,7 +99,7 @@ $(document).ready(function() {
                                                 <h5 class="card-title">${thirdPart[i].project_name}</h5>
                                                 <h6 class="card-subtitle">${thirdPart[i].author}</h6>     
                                             </div>  
-                                            <button class="modal-btn" id="modalBtn"><i class="fa-solid fa-arrow-right-long"></i></button>
+                                            <button type="button" class="btn modal-btn" value="${thirdPart[i]._id}" id="modalBtn" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-arrow-right-long"></i></button>
                                         </div>
                                 </div>
             
@@ -114,14 +115,14 @@ $(document).ready(function() {
                                 for (let i = 0; i < firstPart.length; i++) {
                                     document.getElementById("resultsOne").innerHTML += `
             
-                                    <div class="card">
+                                    <div class="card data-bs-toggle="modal" data-bs-target="#exampleModal"">
                                             <img class="card-img-top" src="${firstPart[i].img_url}" alt="Project Image">
                                             <div class="card-body-container">
                                             <div class="card-body">
                                                 <h5 class="card-title">${firstPart[i].project_name}</h5>
                                                 <h6 class="card-subtitle">${firstPart[i].author}</h6>     
                                             </div>              
-                                            <button class="modal-btn" id="modalBtn"><i class="fa-solid fa-arrow-right-long"></i></button>  
+                                            <button type="button" class="btn modal-btn" value="${firstPart[i]._id}" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-arrow-right-long"></i></button>  
                                             </div>  
                                     </div>
                 
@@ -138,7 +139,7 @@ $(document).ready(function() {
                                                 <h5 class="card-title">${secondPart[i].project_name}</h5>
                                                 <h6 class="card-subtitle">${secondPart[i].author}</h6>     
                                             </div>      
-                                            <button class="modal-btn" id="modalBtn"><i class="fa-solid fa-arrow-right-long"></i></button>   
+                                            <button type="button" class="btn modal-btn" value="${secondPart[i]._id}" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-arrow-right-long"></i></button>   
                                             </div>                         
                                     </div>
                 
@@ -155,7 +156,7 @@ $(document).ready(function() {
                                                 <h5 class="card-title">${array[i].project_name}</h5>
                                                 <h6 class="card-subtitle">${array[i].author}</h6>     
                                             </div>              
-                                            <button class="modal-btn" id="modalBtn"><i class="fa-solid fa-arrow-right-long"></i></button>  
+                                            <button type="button" class="btn modal-btn" value="${thirdPart[i]._id}" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-arrow-right-long"></i></button>  
                                             </div>  
                                     </div>
                 
@@ -167,8 +168,48 @@ $(document).ready(function() {
 
                         splitArray(desktop, tablet)
 
-
-
+                        // modal click function
+                        $(".modal-btn").on("click", function() {
+                            let selectedProject = $(this).attr("value");
+                            $.ajax({
+                                type: "GET",
+                                url: `http://${url}/allProjects`,
+                                dataType: "json",
+                                success: function(data) {
+                                    for (let i = 0; i < data.length; i++) {
+                                        if (data[i]._id === selectedProject) {
+                                            $(".modal").html(`        
+                                            <div class="modal-dialog modal-dialog-scrollable">
+                                                <div class="modal-content info-container">
+                                                    <div class="heading-container justify-content-between align-items-center d-flex p-5">
+                                                        <div class="heading">
+                                                            <h1>${data[i].project_name}</h1>
+                                                        </div>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body info-body px-5">
+                                                        <div class="info-left">
+                                                            <p>${data[i].project_description}</p>
+                                                            <br>
+                                                            <p>
+                                                                <strong>${data[i].author}</strong><br>
+                                                                <a href="${data[i].project_url}">See more</a>
+                                                            </p>
+                                                        </div>
+                                                        <div class="info-right px-2">
+                                                            <img src="${data[i].img_url}" class="info-img">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            `);
+                                        }
+                                    }
+                                }
+                            })
+                            $(".modal").addClass("show");
+                        })
+                        // end of modal click function
 
                     }
 
