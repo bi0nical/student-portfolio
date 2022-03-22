@@ -7,6 +7,10 @@
     flex-direction: column;
     width: 100%;
 
+    @media #{$tablet} {
+        padding: 2rem 3rem;
+    }
+
     &__top{
         width: 100%;
         display: flex;
@@ -17,12 +21,20 @@
             h2{
                 @include page-heading;
                 font-size: 3rem;
+
+                @media #{$tablet} {
+                    font-size: 2rem;
+                }
             }
 
             h3{             
                 font-family: $content-font;
                 font-weight: $body-font-weight;
                 font-size: 1rem;
+
+                @media #{$tablet} {
+                    font-size: .8rem;
+                }
             }
         }
 
@@ -34,6 +46,11 @@
             font-weight: $body-font-weight;
             font-size: .9rem;
             line-height: 1.8rem;
+
+            @media #{$tablet} {
+                font-size: .8rem;
+                white-space: nowrap;
+            }
 
             a{
                 &:hover{
@@ -66,6 +83,10 @@
                     font-size: 1rem;
                     padding-bottom: .1rem;
                     white-space: nowrap;
+
+                    @media #{$tablet} {
+                        font-size: .8rem;
+                    }
                 }
 
                 p{
@@ -74,6 +95,10 @@
                     font-size: .7rem;
                     margin: 0;
                     white-space: nowrap;
+
+                    @media #{$tablet} {
+                        font-size: .5rem;
+                    }
                 }
             }
 
@@ -87,6 +112,10 @@
                     font-size: 1rem;
                     padding-bottom: .1rem;
                     white-space: nowrap;
+
+                    @media #{$tablet} {
+                        font-size: .8rem;
+                    }
                 }
 
                 p{
@@ -95,6 +124,10 @@
                     font-size: .7rem;
                     margin: 0;
                     white-space: nowrap;
+
+                    @media #{$tablet} {
+                        font-size: .5rem;
+                    }
                 }
             }
         }

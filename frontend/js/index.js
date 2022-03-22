@@ -39,12 +39,12 @@ $(document).ready(function() {
                         console.log(array);
                         // end of randomise order
 
-                        // split array 
-
+                        // split array / js media queries
+                        let mobile = window.matchMedia("(max-width: 600px)");
                         let tablet = window.matchMedia("(min-width: 601px) and (max-width: 1023px)");
                         let desktop = window.matchMedia("(min-width: 1024px)");
 
-                        function splitArray(x, y) {
+                        function splitArray(x, y, z) {
                             if (x.matches) {
                                 const threePartIndex = Math.ceil(array.length / 3);
 
@@ -144,7 +144,7 @@ $(document).ready(function() {
                 
                                     `
                                 }
-                            } else {
+                            } else if(z.matches){
                                 for (let i = 0; i < array.length; i++) {
                                     document.getElementById("resultsOne").innerHTML += `
             
@@ -165,15 +165,15 @@ $(document).ready(function() {
 
                         }
 
-                        splitArray(desktop, tablet)
+                        splitArray(desktop, tablet, mobile)
+                        desktop.addListener(splitArray)
+                        tablet.addListener(splitArray)
+                        mobile.addListener(splitArray)
 
-
-
-
+                        // end of js media queries / split array
                     }
 
-                    resultPage(projectsFromDB)
-
+                    resultPage(projectsFromDB) //run result page function with data from DB
                 },
                 error: function() {
                     alert("unable to get projects")
