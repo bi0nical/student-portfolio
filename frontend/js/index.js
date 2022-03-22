@@ -171,6 +171,12 @@ $(document).ready(function() {
                         tablet.addListener(splitArray)
                         mobile.addListener(splitArray)
 
+
+                        // end of js media queries / split array
+                    }
+
+                    resultPage(projectsFromDB) //run result page function with data from DB
+                    
                         // modal click function
                         $(".modal-btn").on("click", function() {
                             let selectedProject = $(this).attr("value");
@@ -213,11 +219,7 @@ $(document).ready(function() {
                             $(".modal").addClass("show");
                         })
                         // end of modal click function
-
-                        // end of js media queries / split array
-                    }
-
-                    resultPage(projectsFromDB) //run result page function with data from DB
+                    
                 },
                 error: function() {
                     alert("unable to get projects")
