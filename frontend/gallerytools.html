@@ -30,8 +30,8 @@
         </div>
 
         <div class="header-right">
-            <button class="header-right__btn" id="returnHomeBtn">BACK TO HOME</button>
-            <button class="header-right__btn" id="galleryToolsBtn">GALLERY TOOLS</button>
+            <a href="index.html"><button class="header-right__btn" id="returnHomeBtn">BACK TO HOME</button></a>
+            <a href="gallerytools.html"><button class="header-right__btn" id="galleryToolsBtn">GALLERY TOOLS</button></a>
         </div>
     </div>
 
@@ -39,7 +39,7 @@
     <div class="gallery-tools__main">
         <div class="gallery-tools__container">
             <div class="heading-container">
-                <div class="heading">
+                <div class="heading" id="galleryHeading">
                     <h1>ADD TO GALLERY</h1>
                 </div>
                 <div class="line-detail"></div>
@@ -79,7 +79,7 @@
                                 <input type="text" class="form-control" id="projectLink" placeholder="Add a link to your project!">
                             </div>
 
-                            <button type="submit" class="addProjectBtn">ADD TO GALLERY</button>
+                            <button type="submit" class="add-project-btn" id="addProjectBtn">ADD TO GALLERY</button>
                         </div>
                     </div>
                     <!-- end of add project form -->
@@ -113,7 +113,7 @@
                                 <input type="text" class="form-control" id="newAuthorName" placeholder="Project author">
                             </div>
 
-                            <button type="submit" class="updateProjectBtn">UPDATE PROJECT</button>
+                            <button type="submit" class="update-project-btn" id=updateProjectBtn">UPDATE PROJECT</button>
                         </div>
                     </div>
                     <!-- end of update form -->

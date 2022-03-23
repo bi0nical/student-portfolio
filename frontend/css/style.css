@@ -100,7 +100,7 @@
   padding-bottom: 5rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto auto 1.5rem 3rem auto 10rem auto;
+  grid-template-rows: auto 12vw 1.5vw 3rem auto;
 }
 @media (min-width: 601px) and (max-width: 1023px) {
   .results {
@@ -109,7 +109,7 @@
     padding-bottom: 3rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 13rem 1.5rem 3rem auto 10rem auto;
+    grid-template-rows: auto 13rem 1.5rem 3rem auto;
   }
 }
 @media (max-width: 600px) {
@@ -194,7 +194,7 @@
   grid-row: 2/3;
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 1.1vw;
   padding-right: 5rem;
 }
 @media (min-width: 601px) and (max-width: 1023px) {
@@ -245,12 +245,12 @@
 .results-one {
   padding-right: 1.5vw;
   grid-column: 1/2;
-  grid-row: 5/8;
+  grid-row: 5/6;
 }
 .results-two {
   padding: 0 1.5vw;
   grid-column: 2/3;
-  grid-row: 3/8;
+  grid-row: 3/6;
 }
 @media (min-width: 601px) and (max-width: 1023px) {
   .results-two {
@@ -266,7 +266,7 @@
 .results-three {
   padding-left: 1.5vw;
   grid-column: 3/4;
-  grid-row: 2/8;
+  grid-row: 2/6;
 }
 @media (min-width: 601px) and (max-width: 1023px) {
   .results-three {
@@ -330,7 +330,7 @@
 }
 .info-container h1 {
   font-family: "Clara Antiqua", sans-serif;
-  font-size: 5vw;
+  font-size: 5rem;
 }
 .info-container p {
   font-family: "Montserrat", sans-serif;
@@ -433,7 +433,6 @@
 .gallery-tools__main .gallery-tools__container .heading-container {
   width: 100%;
   display: flex;
-  padding-bottom: 2rem;
 }
 .gallery-tools__main .gallery-tools__container .heading-container .heading {
   width: fit-content;
@@ -472,7 +471,7 @@
 }
 .gallery-tools__main .accordion-container .small {
   width: 10rem;
-  max-height: auto;
+  max-height: 40rem;
   margin: 0 1rem;
   background-color: #313490 !important;
 }
@@ -494,6 +493,31 @@
 }
 .gallery-tools__main .accordion-container .form-control {
   resize: none;
+}
+.gallery-tools__main .accordion .add, .gallery-tools__main .accordion .update, .gallery-tools__main .accordion .delete {
+  padding-left: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+}
+.gallery-tools__main .accordion .form-control {
+  border: solid 2px #313490;
+  border-radius: 0;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+}
+.gallery-tools__main .accordion .add-project-btn {
+  background: #313490;
+  color: white;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  border: none;
+}
+.gallery-tools__main .accordion .add-project-btn:hover {
+  cursor: pointer;
+  background: none;
+  color: #313490;
+  border: solid 2px #313490;
 }
 
 .footer {

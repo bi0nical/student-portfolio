@@ -25,6 +25,7 @@ $(document).ready(function() {
                 dataType: "json",
                 success: function(projectsFromDB) {
                     console.log(projectsFromDB);
+                    
                     document.getElementById("resultsOne").innerHTML = "";
                     document.getElementById("resultsTwo").innerHTML = "";
                     document.getElementById("resultsThree").innerHTML = "";
@@ -46,6 +47,7 @@ $(document).ready(function() {
                         let desktop = window.matchMedia("(min-width: 1024px)");
 
                         function splitArray(x, y, z) {
+
                             if (x.matches) {
                                 const threePartIndex = Math.ceil(array.length / 3);
 
@@ -145,7 +147,8 @@ $(document).ready(function() {
                 
                                     `
                                 }
-                            } else if(z.matches){
+                            } else if (z.matches) {
+                                
                                 for (let i = 0; i < array.length; i++) {
                                     document.getElementById("resultsOne").innerHTML += `
             
@@ -156,7 +159,7 @@ $(document).ready(function() {
                                                 <h5 class="card-title">${array[i].project_name}</h5>
                                                 <h6 class="card-subtitle">${array[i].author}</h6>     
                                             </div>              
-                                            <button type="button" class="btn modal-btn" value="${thirdPart[i]._id}" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-arrow-right-long"></i></button>  
+                                            <button type="button" class="btn modal-btn" value="${array[i]._id}" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-arrow-right-long"></i></button>  
                                             </div>  
                                     </div>
                 
@@ -166,28 +169,29 @@ $(document).ready(function() {
 
                         }
 
-                        splitArray(desktop, tablet)
+                        splitArray(desktop, tablet, mobile)
                         desktop.addListener(splitArray)
                         tablet.addListener(splitArray)
                         mobile.addListener(splitArray)
+                        
 
 
                         // end of js media queries / split array
                     }
 
                     resultPage(projectsFromDB) //run result page function with data from DB
-                    
-                        // modal click function
-                        $(".modal-btn").on("click", function() {
-                            let selectedProject = $(this).attr("value");
-                            $.ajax({
-                                type: "GET",
-                                url: `http://${url}/allProjects`,
-                                dataType: "json",
-                                success: function(data) {
-                                    for (let i = 0; i < data.length; i++) {
-                                        if (data[i]._id === selectedProject) {
-                                            $(".modal").html(`        
+
+                    // modal click function
+                    $(".modal-btn").on("click", function() {
+                        let selectedProject = $(this).attr("value");
+                        $.ajax({
+                            type: "GET",
+                            url: `http://${url}/allProjects`,
+                            dataType: "json",
+                            success: function(data) {
+                                for (let i = 0; i < data.length; i++) {
+                                    if (data[i]._id === selectedProject) {
+                                        $(".modal").html(`        
                                             <div class="modal-dialog modal-dialog-scrollable">
                                                 <div class="modal-content info-container">
                                                     <div class="heading-container justify-content-between align-items-center d-flex p-5">
@@ -212,14 +216,21 @@ $(document).ready(function() {
                                                 </div>
                                             </div>
                                             `);
-                                        }
                                     }
                                 }
-                            })
-                            $(".modal").addClass("show");
+                            }
                         })
-                        // end of modal click function
-                    
+                        $(".modal").addClass("show");
+                    })
+                    // end of modal click function
+
+
+                    // start of go to gallery
+                    $("#goToGallery").on("click", function() {
+
+                    })
+                    // end of go to gallery
+
                 },
                 error: function() {
                     alert("unable to get projects")
@@ -237,7 +248,7 @@ $(document).ready(function() {
 
 
     // Add a new project
-    $(".addProjectBtn").click(function() {
+    $("#addProjectBtn").click(function() {
         event.preventDefault();
         let projectTitle = $("#projectTitle").val();
         let projectDescription = $("#projectDescription").val();
@@ -292,7 +303,7 @@ $(document).ready(function() {
     // end of add new project
 
     // Update a project
-    $(".updateProjectBtn").click(function() {
+    $("#updateProjectBtn").click(function() {
         event.preventDefault();
         let projectId = $("#projectID").val();
         let projectTitle = $("#newProjectTitle").val();
@@ -349,7 +360,7 @@ $(document).ready(function() {
     // end of update project
 
     // Delete a project
-    $(".deleteProjectBtn").click(function() {
+    $("#deleteProjectBtn").click(function() {
         event.preventDefault();
         let projectId = $("#deleteProjectId").val();
         console.log(projectId);
@@ -398,7 +409,6 @@ $(document).ready(function() {
 // ----------------------
 
 $(".choice").on("click", function() {
-    console.log("test");
     $(".choice").removeClass("expand");
     $(".choice").addClass("small");
     $(this).removeClass("small");
@@ -406,8 +416,40 @@ $(".choice").on("click", function() {
 })
 
 $(".update").on("click", function() {
+    $(".heading-container").empty().append(
+        `
+     <div class="heading-container">
+        <div class="heading">
+            <h1>UPDATE PROJECT</h1>
+        </div>
+        <div class="line-detail"></div>
+    </div>`
+    )
+})
 
-    console.log("clicked")
+$(".delete").on("click", function() {
+    $(".heading-container").empty().append(
+        `
+     <div class="heading-container">
+        <div class="heading">
+            <h1>DELETE PROJECT</h1>
+        </div>
+        <div class="line-detail"></div>
+    </div>`
+    )
+})
+
+$(".add").on("click", function() {
+    $(".heading-container").empty().append(
+        `
+     <div class="heading-container">
+        <div class="heading">
+            <h1>ADD TO GALLERY</h1>
+        </div>
+        <div class="line-detail"></div>
+    </div>
+    `
+    )
 })
 
 // document.querySelector("#input").addEventListener("keydown", (event) => {
