@@ -1,56 +1,92 @@
 .results__header{
     width: 100%;
-    padding: 3rem 5rem;
+    padding: 3vw 8vw;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding-bottom: 5rem;
+    padding-bottom: 4vw;
     margin: 0;
 
     @media #{$tablet} {
-        padding: 2rem 3rem;
+        padding: 3vw 5vw;
     }
 
     @media #{$mobile} {
         display: flex;
         flex-direction: column;
-        padding: 2rem
+        width: 100%;
+        padding: 4vw 8vw;
     }
 
     .header-left{
         display: flex;
         height: fit-content;
 
+        @media #{$mobile} {
+            width: 100%;
+            justify-content: space-between;
+            padding-bottom: 4vw;
+        }
+
+
         .course-info, .yoobee-info{
 
-            margin-right: 3rem;
+            margin-right: 3vw;
+
+            @media #{$mobile} {
+                margin-right: 0vw;
+                width: 50%;
+            }
 
             &__heading{
                 font-family: $content-font;
                 font-weight: $content-heading-weight;
-                font-size: 1rem;
-                line-height: 1.2rem;
+                font-size: 1vw;
+                line-height: 1.2vw;
                 white-space: nowrap;
 
                 @media #{$tablet} {
-                    font-size: .8rem;
+                    font-size: 1.5vw;
                 }
+
+                @media #{$mobile} {
+                    font-size: 4vw;
+                    line-height: 5.2vw;
+                }
+            
             }
+
 
             &__subheading{
                 font-family: $content-font;
                 font-weight: $body-font-weight;
-                font-size: .8rem;
-                line-height: .8rem;
+                font-size: .8vw;
+                line-height: .8vw;
                 color: $purple;
                 margin: 0;
                 white-space: nowrap;
 
                 @media #{$tablet} {
-                    font-size: .6rem;
+                    font-size: 1.2vw;
+                }
+
+                @media #{$mobile} {
+                    font-size: 2.5vw;
                 }
             }
         }
+
+        .course-info{
+            @media #{$mobile} {
+                margin-right: 4vw;
+            }
+        }
+        .yoobee-info{
+            @media #{$mobile} {
+                margin-left: 4vw;
+            }
+        }
+
     }
 
     .header-right{
@@ -62,27 +98,56 @@
         margin: 0;
         padding: 0;
 
+        @media #{$mobile} {
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        a{
+            @media #{$mobile} {
+                width: 100%;
+            }
+        }
 
         &__btn{
-            padding: .75rem 1rem;
+            padding: .75vw 1vw;
             min-height: 100%;
-            margin-left: 1.5rem;
+            margin-left: 1.5vw;
             background: none;
             border: solid 3px $purple;
             font-family: $content-font;
             font-weight: $body-font-weight;
-            font-size: .8rem;
-            line-height: .8rem;
+            font-size: .8vw;
+            line-height: .8vw;
             white-space: nowrap;
 
             @media #{$tablet} {
-                padding: .5rem .75rem;
-                font-size: .6rem;
+                padding: 1vw 1.5vw;
+                font-size: 1vw;
+            }
+
+            @media #{$mobile} {
+                width: 90%;
+                margin: 0;
+                font-size: 2.5vw;
+                padding: 3vw 5vw;
             }
 
             &:hover{
                 background-color: $purple;
                 color: white;
+            }
+        }
+
+        .home{
+            @media #{$mobile} {
+                margin-right: 4vw;
+            }
+        }
+
+        .gallery{
+            @media #{$mobile} {
+                margin-left: 4vw;
             }
         }
     }
@@ -91,23 +156,23 @@
 
 .results{
     height: fit-content;
-    padding: 0rem 5rem;
-    padding-bottom: 5rem;
+    padding: 0 8vw;
+    padding-bottom: 8vw;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto 12vw 1.5vw 3rem auto;
+    grid-template-rows: auto 9vw 1.5vw 3vw auto;
 
     @media #{$tablet}{
         height: fit-content;
-        padding: 0rem 3rem;
-        padding-bottom: 3rem;
+        padding: 0vw 5vw;
+        padding-bottom: 3vw;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto 13rem 1.5rem 3rem auto;
+        grid-template-rows: auto 12vw 1.5vw 3vw auto;
     }
 
     @media #{$mobile}{
-        padding: 0 2rem;
+        padding: 3vw 8vw;
         display: flex;
         flex-direction: column;
     }
@@ -115,12 +180,12 @@
     .heading-container{
         width: 100%;
         display: flex;
-        padding-bottom: 2rem;
+        padding-bottom: 2vw;
         grid-column: 1 / 4;
         grid-row: 1/ 2;
 
         @media #{$mobile}{
-            padding-bottom: .5rem;
+            padding-bottom: .5vw;
         }
 
 
@@ -128,35 +193,32 @@
             width: fit-content;
             float: left;
             white-space: nowrap;
-            padding-right: 2rem;
+            padding-right: 2vw;
 
            
 
             h1{
                 @include page-heading;
                 // flex-wrap: nowrap;
-
-                @media #{$tablet}{
-                    font-size: 3.5rem;
-                }
+                padding-bottom: none;
 
                 @media #{$mobile}{
-                    font-size: 10vw;
+                    font-size: 8.4vw;
                 }
             }
 
             h3{
                 font-family: $content-font;
                 color: $purple;
-                font-weight: $content-heading-weight;
+                font-weight: 300;
                 font-size: 1.4vw;
 
                 @media #{$tablet} {
-                    font-size: 1rem;
+                    // font-size: 1vw;
                 }
 
                 @media #{$mobile}{
-                    font-size: 4vw;
+                    font-size: 3.5vw;
                 }
             }
             
@@ -169,8 +231,8 @@
             float: right;
             border-top: 2px solid $purple;
             border-right: 2px solid $purple;
-            margin-top: .5rem;
-            margin-bottom: .5rem;
+            margin-top: .5vw;
+            margin-bottom: 2vw;
 
             @media #{$mobile}{
                 display: none;
@@ -180,7 +242,7 @@
         @media #{$tablet}{
             width: 100%;
             display: flex;
-            padding-bottom: 2rem;
+            padding-bottom: 2vw;
             grid-column: 1 / 3;
             grid-row: 1/ 2;
         }
@@ -191,19 +253,19 @@
             grid-row: 2/ 3;
             font-family: $content-font;
             font-weight: $body-font-weight;
-            font-size: 1.1vw;
-            padding-right: 5rem;
+            font-size: 1vw;
+            padding-right: 2vw;
 
             @media #{$tablet}{
                 grid-column: 1 / 2;
                 grid-row: 2/ 3;
-                font-size: .8rem;
-                padding-right: 1rem;
+                font-size: 1.1vw;
+                padding-right: 2vw;
             }
 
             @media #{$mobile}{
                 padding-right: 0;
-
+                font-size: 2.5vw;
             }
             
         }
@@ -212,32 +274,46 @@
             grid-column: 1 / 2;
             grid-row: 3/ 4;
             display: flex;
-            align-items: flex-start;
+            align-items: center;
              
             h6{
                 font-family: $content-font;
                 font-weight: $content-heading-weight;
-                font-size: 1rem;
+                font-size: 1.2vw;
                 line-height: 1.2vw;
-                padding-right: 1rem;
-                padding-bottom: 1rem;
+                padding-right: 1vw;
+                margin: 0;
                 
 
                 @media #{$tablet} {
-                    font-size: .8rem;
+                    font-size: 1.2vw;
+                }
+
+                @media #{$mobile} {
+                    font-size: 3vw;
+                    line-height: 3vw;
+                    padding-right: 2.5vw;
+                    margin-bottom: 3vw;
                 }
             }
 
             .go-to-gallery-btn{
                 background: none;
                 border: none;
-                font-size: 1.2rem;
-                line-height: 1vw;
+                font-size: 1.2vw;
+                line-height: 1.2vw;
                 color: $purple;
                 white-space: nowrap;
-
+            
                 @media #{$tablet} {
-                    font-size: .8rem;
+                    font-size: 1.2vw;
+                }
+
+                @media #{$mobile} {
+                    font-size: 3vw;
+                    line-height: 3vw;
+                    padding-bottom: 1vw;
+                    margin-bottom: 3vw;
                 }
             }
             
@@ -284,7 +360,11 @@
             margin-bottom: 2vw;    
             border: none;
             border-radius: 0;
-            // box-shadow: 5px 5px 40px lightgray;
+            box-shadow: 3px 3px 10px 3px #e7e7e7;
+
+            @media #{$mobile} {
+                margin-bottom: 5vw;
+            }
     
             &-body-container{
                 display: flex;
@@ -292,9 +372,12 @@
     
                 .card-body{
                    
-                    padding: 1rem 0;
+                    padding: 1vw;
                     width: 80%;
-              
+
+                    @media #{$mobile} {
+                        padding: 2vw;
+                    }
                 }
             }
     
@@ -302,20 +385,28 @@
             &-title{
                 font-family: $content-font;
                 font-weight: $content-heading-weight;
-                font-size: 1.2rem;
+                font-size: 1.2vw;
 
                 @media #{$tablet} {
-                    font-size: 1rem;
+                    font-size: 1vw;
+                }
+
+                @media #{$mobile} {
+                    font-size: 4vw;
                 }
             }
     
             &-subtitle{
                 font-family: $content-font;
                 font-weight: $body-font-weight;
-                font-size: 1rem;
+                font-size: 1vw;
 
                 @media #{$tablet} {
-                    font-size: .7rem;
+                    font-size: .7vw;
+                }
+
+                @media #{$mobile} {
+                    font-size: 2.5vw;
                 }
             }
     
@@ -324,13 +415,21 @@
                 background: none;
                 display: flex;
                 align-items: flex-start;
-                padding: 1rem 0;
+                padding: 1vw;
                 border:none;
+
+                @media #{$mobile} {
+                    padding: 2vw;
+                }
                 
                 .fa-arrow-right-long{
                     width: fit-content;
-                    font-size: 1.4rem;
+                    font-size: 1.4vw;
                     color: $purple;
+
+                    @media #{$mobile} {
+                        font-size: 4vw;
+                    }
     
                 }
             }
