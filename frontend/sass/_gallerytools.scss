@@ -1,13 +1,13 @@
 .gallery-tools{
-    min-height: 85vh;
+    min-height: 100vh;
 
     &__header{
         width: 100%;
-        padding: 3rem 5rem;
+        padding: 3vw 8vw;
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        padding-bottom: 5rem;
+        padding-bottom: 3vw;
         
 
         .header-left{
@@ -17,20 +17,20 @@
 
             .course-info, .yoobee-info{
 
-                margin-right: 3rem;
+                margin-right: 3vw;
 
                 &__heading{
                     font-family: $content-font;
                     font-weight: $content-heading-weight;
-                    font-size: 1rem;
-                    line-height: 1.2rem;
+                    font-size: 1vw;
+                    line-height: 1.2vw;
                 }
 
                 &__subheading{
                     font-family: $content-font;
                     font-weight: $body-font-weight;
-                    font-size: .8rem;
-                    line-height: .8rem;
+                    font-size: .8vw;
+                    line-height: .8vw;
                     color: $purple;
                     margin: 0;
                 }
@@ -48,15 +48,15 @@
 
 
             &__btn{
-                padding: .75rem 1rem;
+                padding: .75vw 1vw;
                 min-height: 100%;
-                margin-left: 1.5rem;
+                margin-left: 1.5vw;
                 background: none;
                 border: solid 3px $purple;
                 font-family: $content-font;
                 font-weight: $body-font-weight;
-                font-size: .8rem;
-                line-height: .8rem;
+                font-size: .8vw;
+                line-height: .8vw;
 
                 &:hover{
                     background-color: $purple;
@@ -70,21 +70,22 @@
     &__main{
         margin: 0;
         padding: 0;
-        padding: 0rem 5rem;
-        padding-bottom: 5rem;
+        padding: 0vw 8vw;
+        padding-bottom: 5vw;
+    
 
         .gallery-tools__container{
 
             .heading-container{
                 width: 100%;
                 display: flex;
-                // padding-bottom: 2rem;
+            
 
                 .heading{
                     width: fit-content;
                     float: left;
                     white-space: nowrap;
-                    padding-right: 2rem;
+                    padding-right: 2vw;
 
                     h1{
                         @include page-heading;
@@ -99,8 +100,8 @@
                     float: right;
                     border-top: 2px solid $purple;
                     border-right: 2px solid $purple;
-                    margin-top: .5rem;
-                    margin-bottom: .5rem;
+                    margin-top: .5vw;
+                    margin-bottom: .5vw;
                 }
             }
         }
@@ -115,7 +116,7 @@
                 .choice{
                     // height: auto;
                     box-sizing: border-box;
-                    padding: 1rem;
+                    padding: 1vw;
                     overflow: hidden;
                     float: left;
                     align-items: center;
@@ -128,9 +129,9 @@
                 }
                
                 .small{
-                    width: 10rem;
-                    max-height: 40rem;
-                    margin: 0 1rem;
+                    width: 10vw;
+                    max-height: 35vw;
+                    margin: 0 1vw;
                     background-color: $purple !important;
                 }
 
@@ -163,24 +164,24 @@
             .add, .update, .delete{
                 padding-left: 0;
                 font-family: $content-font;
-                font-size: 1.2rem;
+                font-size: 1.2vw;
             }
 
             .form-control{
                 border: solid 2px $purple;
                 border-radius: 0;
-                margin-top: .5rem;
-                margin-bottom: 1rem;
-                font-size: 0.8rem;
+                margin-top: .5vw;
+                margin-bottom: 1vw;
+                font-size: 0.8vw;
 
             }
 
-            .add-project-btn{
+            .add-project-btn, .update-project-btn, .delete-project-btn{
                 
                 background: $purple;
                 color: white;
                 font-weight: $content-heading-weight;
-                padding: 0.5rem 1rem;
+                padding: 0.5vw 1vw;
                 border: none;
 
                 &:hover{
